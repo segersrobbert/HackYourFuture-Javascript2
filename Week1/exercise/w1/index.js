@@ -1,8 +1,3 @@
-console.log('Hack your future, right?!');
-
-const header = document.querySelector('h1');
-console.log('header: ', header);
-
 // EXERCISE:
 // select "change image" button (querySelector)
 // add click event listener
@@ -15,7 +10,28 @@ console.log('header: ', header);
 //    set image src to imageInput element value
 
 // ====================================== //
+const ChangeImageButton = document.querySelector('#btn-changeImage');
+console.log(ChangeImageButton);
+const changeImage = () => {
+  const imgElement = document.querySelector('#imageToChange');
+  const imageInput = document.getElementById('imageInput');
+  //console.log(imageInput.value);
+  imgElement.src = imageInput.value;
+};
+ChangeImageButton.addEventListener('click', changeImage); // in this ES6 new method this part should after the function
 
+// or
+/*function changeImage() {
+  const imgElement = document.querySelector('#imageToChange');
+  const imageInput = document.getElementById('imageInput');
+  //console.log(imageInput.value);
+  imgElement.src = imageInput.value;
+}
+
+
+
+
+*/
 // BONUS:
 // select "add todo" button (querySelector)
 // add click event listener
@@ -28,3 +44,13 @@ console.log('header: ', header);
 //    create <li> element
 //    set <li> element innerHtml to todoInput value
 //    add <li> element to todoList
+
+const addTodoButton = document.getElementById('btn-addTodo');
+const addTodo = () => {
+  const getTodoList = document.querySelector('#todoList');
+  const getTodoInput = document.querySelector('#todoInput');
+  const createLiElement = document.createElement('li');
+  createLiElement.innerHTML = getTodoInput.value;
+  getTodoList.appendChild(createLiElement);
+};
+addTodoButton.addEventListener('click', addTodo);

@@ -11,14 +11,22 @@
 
 // ====================================== //
 const ChangeImageButton = document.querySelector('#btn-changeImage');
-console.log(ChangeImageButton);
+const imgElement = document.querySelector('#imageToChange');
+const imageInput = document.getElementById('imageInput');
 const changeImage = () => {
+  imgElement.src = imageInput.value;
+};
+ChangeImageButton.addEventListener('click', changeImage); // in this ES6 new method this part should after the function
+
+//or
+/*
+ChangeImageButton.addEventListener('click', () => {
   const imgElement = document.querySelector('#imageToChange');
   const imageInput = document.getElementById('imageInput');
   //console.log(imageInput.value);
   imgElement.src = imageInput.value;
-};
-ChangeImageButton.addEventListener('click', changeImage); // in this ES6 new method this part should after the function
+});
+*/
 
 // or
 /*function changeImage() {
@@ -46,10 +54,10 @@ ChangeImageButton.addEventListener('click', changeImage); // in this ES6 new met
 //    add <li> element to todoList
 
 const addTodoButton = document.getElementById('btn-addTodo');
+const getTodoList = document.querySelector('#todoList');
+const getTodoInput = document.querySelector('#todoInput');
+const createLiElement = document.createElement('li');
 const addTodo = () => {
-  const getTodoList = document.querySelector('#todoList');
-  const getTodoInput = document.querySelector('#todoInput');
-  const createLiElement = document.createElement('li');
   createLiElement.innerHTML = getTodoInput.value;
   getTodoList.appendChild(createLiElement);
 };

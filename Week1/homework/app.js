@@ -83,7 +83,9 @@
   }
 
   document.body.append(generateList());
-    const bookCovers = {
+  
+  
+  const bookCovers = {
     dan_brown_da_vinci_code: './bookcovers/the da vinci code.jpeg',
     suzanne_collins_hunger_games: './bookcovers/thehungergames.jpg',
     michelle_obama_becoming: './bookcovers/becoming.jpg',

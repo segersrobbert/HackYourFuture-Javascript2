@@ -83,4 +83,16 @@
   }
 
   document.body.append(generateList());
+    const bookCovers = {
+    dan_brown_da_vinci_code: './bookcovers/the da vinci code.jpeg',
+    suzanne_collins_hunger_games: './bookcovers/thehungergames.jpg',
+    michelle_obama_becoming: './bookcovers/becoming.jpg',
+    harper_lee_kill_a_mockingbird: './bookcovers/tokillamockingbird.jpg',
+    elif_shafak_forty_rules_of_love: './bookcovers/elifshafak.jpeg',
+    orhan_pamuk_a_strangeness_inmymind: './bookcovers/orhanpamuk.jpg',
+    john_green_fault_in_ourstars: './bookcovers/thefaultinourstars.jpg',
+    bill_clinton_my_life: './bookcovers/mylife.jpg',
+    antoine_de_saint_exupery_little_prince: './bookcovers/thelittleprince.jpg',
+    geronimo_stilton_lost_treasure_ofthe_emerald_eye: './bookcovers/geronimostilton.jpg'
+  };
 }

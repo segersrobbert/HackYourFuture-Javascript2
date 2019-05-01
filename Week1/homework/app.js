@@ -70,10 +70,8 @@
     }
   };
   // Replace with your own code
-  const ul = document.createElement('ul');
   function generateList() {
     const newList = document.createElement('ul');
-
     for (let i = 0; i < bookTitles.length; i++) {
       const book = bookTitles[i];
       newList.innerHTML += `<li>${book}</li>`;

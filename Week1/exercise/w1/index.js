@@ -54,35 +54,38 @@ ChangeImageButton.addEventListener('click', changeImage); //declare before or af
 //    set <li> element innerHtml to todoInput value
 //    add <li> element to todoList
 
+// If you didn't create "li" elemen inside the function, it is not create new li element each click.
+// Otherwise, it will override the li element created once.
+
 //------------------GET AND CREATE ELEMENTS--------------------
 const addTodoButton = document.getElementById('btn-addTodo');
-const getTodoList = document.querySelector('#todoList');
 const getTodoInput = document.querySelector('#todoInput');
-const createLiElement = document.createElement('li');
-
+const getTodoList = document.querySelector('#todoList');
 //------------------FUNCTION--------------------
 
 //------------------FIRST--------------------
 
-/*
 const addTodo = () => {
+  const createLiElement = document.createElement('li');
   createLiElement.innerHTML = getTodoInput.value;
   getTodoList.appendChild(createLiElement);
 };
 addTodoButton.addEventListener('click', addTodo);
-*/
 
 //------------------SECOND--------------------
-/*
-addTodoButton.addEventListener('click', () => {
-  createLiElement.innerHTML = getTodoInput.value;
-  getTodoList.appendChild(createLiElement);
-});
-*/
+// const getTodoInput = document.querySelector('#todoInput');
+// const getTodoList = document.querySelector('#todoList');
+// addTodoButton.addEventListener('click', () => {
+//   const createLiElement = document.createElement('li');
+//   createLiElement.innerHTML = getTodoInput.value;
+//   getTodoList.appendChild(createLiElement);
+// });
 
 //------------------THIRD------------------
-function addTodo() {
-  createLiElement.innerHTML = getTodoInput.value;
-  getTodoList.appendChild(createLiElement);
-}
-addTodoButton.addEventListener('click', addTodo);
+
+// function addTodo() {
+//   const createLiElement = document.createElement('li');
+//   createLiElement.innerHTML = getTodoInput.value;
+//   getTodoList.appendChild(createLiElement);
+// }
+// addTodoButton.addEventListener('click', addTodo);

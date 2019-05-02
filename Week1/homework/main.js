@@ -1,7 +1,7 @@
 'use strict';
 
 {
-
+console.log("1");
 // ----------------------------------1.1-----------------------------------
 // Open the apps.js and start by declaring an array that contains 10 strings. 
 // These strings should be of book titles you have read (or made up) 

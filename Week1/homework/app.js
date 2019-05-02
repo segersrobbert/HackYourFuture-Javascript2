@@ -1,6 +1,7 @@
 'use strict';
 
-
+  // This is an array that stores my books' information.
+  // Each element is an object that contains details.
   const books = [
     {
       id: 'feed_me_vegan',
@@ -81,6 +82,10 @@
       rating: 4
     }
   ];
+
+// This function is used by compare(), the task is to set the "status" priority.
+// I want "Read" comes first, then "Currently reading" and "Wishlist"
+// come after. This function returns number.
 function getStatusPriority(status){
   switch (status) {
     case 'Read':
@@ -92,63 +97,101 @@ function getStatusPriority(status){
     default: return 0;
   }
 }
+
+// This function is used by sort().
+// Basically compare() returns negative, 0, and positive numbers.
+// If 0 or negative is returned, order is preserved.
 function compare(a, b){
-  if(a.rating === b.rating){
-    return getStatusPriority(a.status) - getStatusPriority(b.status);
-  }else{
+
+  // First I sort by rating, if they are different..
+  if(a.rating !== b.rating){
+
+    // Make sure a book that has higher ranking is placed first.
     return (b.rating || 0) - (a.rating || 0);
+
+  }else{
+    //... and if the ratings are the same, sort by status
+    // In this case, I wanted to sort in order of "Currently reading" and "Wishlist"
+    // It converts the status into a number and compares those.
+    return getStatusPriority(a.status) - getStatusPriority(b.status);
   }
 
 }
-  const myBooks = document.querySelector('.books');
-  //const rankedBooks = books.filter(book => book.rating > 5 || book.rating === undefined);
+const myBooks = document.querySelector('.books');
+
+// I tried using filter(),
+// Result: not showing all the books I have.
+// It's handy if you want to only show the filtered books
+// const rankedBooks = books.filter(book => book.rating > 5 || book.rating === undefined);
+
+// Keep in mind that sort() only works for sorting an array, not an object.
+// We need to explain to the sort method how the objects need to be sorted using
+// a compare function.
 const sortedBooks = books.sort(compare);
-  const addBooks = () => {
-    for (const book of sortedBooks) {
-      const listElement = document.createElement('li');
-      myBooks.appendChild(listElement);
 
-      const bookTitle = document.createElement('h2');
-      bookTitle.innerHTML = book.title;
-      bookTitle.className = 'bookTitle';
-      listElement.appendChild(bookTitle);
+// This function to add a book at a time by taking the information from my books array.
+const addBook = book => {
+  const listElement = document.createElement('li');
+  myBooks.appendChild(listElement);
 
-      const bookCover = document.createElement('img');
-      bookCover.src = `./assets/${book.id}.jpg`;
-      bookCover.alt = book.title;
-      listElement.appendChild(bookCover);
+  const bookTitle = document.createElement('h2');
+  bookTitle.innerHTML = book.title;
+  listElement.appendChild(bookTitle);
 
-      const detailContainer = document.createElement('div');
-      listElement.appendChild(detailContainer);
+  const bookCover = document.createElement('img');
+  bookCover.src = `./assets/${book.id}.jpg`;
+  // Always fill your alt (for accessibility and as fallback if the image doesn't load)
+  bookCover.alt = book.title;
+  listElement.appendChild(bookCover);
 
-      const author = document.createElement('span');
-      author.innerHTML = 'Author: ' + book.author;
-      detailContainer.appendChild(author);
+  // This detailContainer is a div. I'm using for wrapping/grouping my detail elements into a block.
+  const detailContainer = document.createElement('div');
+  listElement.appendChild(detailContainer);
 
-      const statusReading = document.createElement('span');
-      statusReading.innerHTML = 'Status: ' + book.status;
-      detailContainer.appendChild(statusReading);
+  const author = document.createElement('span');
+  author.innerHTML = 'Author: ' + book.author;
+  detailContainer.appendChild(author);
 
-      const reviewLink = document.createElement('a');
-      reviewLink.href = book.review;
-      reviewLink.target = '_blank';
-      if (book.status === 'Read') {
-        reviewLink.innerHTML = 'My Review';
-      } else {
-        reviewLink.innerHTML = 'Reviews';
-      }
+  const statusReading = document.createElement('span');
+  statusReading.innerHTML = 'Status: ' + book.status;
+  detailContainer.appendChild(statusReading);
 
-      detailContainer.appendChild(reviewLink);
+  const reviewLink = document.createElement('a');
+  reviewLink.href = book.review;
+  // If you click, it brings you to a new tab.
+  reviewLink.target = '_blank';
 
-      const convertRatingToStars = rating => {
-        const star = '⭐';
-        return star.repeat(rating);
-      };
+  // Not all the books mentioned have been read.
+  // to show the difference between "My Review" (I wrote it myself)
+  // and "Reviews" (bunch of reviews from Goodreads)
+  if (book.status === 'Read') {
+    reviewLink.innerHTML = 'My Review';
+  } else {
+    reviewLink.innerHTML = 'Reviews';
+  }
 
-      const bookRating = document.createElement('span');
-      bookRating.innerHTML = convertRatingToStars(book.rating);
-      bookRating.className = 'rating';
-      detailContainer.appendChild(bookRating);
-    }
+  detailContainer.appendChild(reviewLink);
+
+  //After showing "My Review" in a form of a link. I thought it would have easier to read my data by giving it a rating. So I want to show the ratings for the books I have read.
+  //I could just add innerHTML by adding directly the star emojis.. but.. there's repeat() method. Why not?
+  const convertRatingToStars = rating => {
+    const star = '⭐';
+    //repeat() is basically repeating my star emoji by my rating.
+    return star.repeat(rating);
   };
-  addBooks();
+
+  const bookRating = document.createElement('span');
+  bookRating.innerHTML = convertRatingToStars(book.rating);
+
+  // I need to give this span a class name, so I can style my star in CSS.
+  bookRating.className = 'rating';
+  detailContainer.appendChild(bookRating);
+};
+
+// last but not least, calling my function, so you can see it on the browser :)
+// since I have an array, so I use for...of in the statement
+// I could use (const book of books) means I'm taking directly to my books array.
+// Since I've sorted my array, so I'm taking it from "sortedBooks".
+for (const book of sortedBooks) {
+  addBook(book);
+}

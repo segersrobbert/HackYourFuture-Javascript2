@@ -1,1 +1,49 @@
 /* add your styling here */
+body {
+  box-sizing: border-box;
+  background-color: rgb(218, 214, 221);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#books {
+  border-top: solid rgb(103, 101, 104) 1px;
+  border-radius: 2px;
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+.book-header {
+  padding-left: 50px;
+}
+
+li h1 {
+  font-size: 20px;
+}
+
+li {
+  width: 15%;
+  margin: 20px;
+}
+
+p {
+  font-size: 12px;
+  display: inline-block;
+}
+
+strong {
+  font-size: 12px;
+}
+
+img:hover {
+  box-shadow: 10px 10px 5px #888888;
+  transform: scale(1.05);
+  transition: all 0.1ms;
+}

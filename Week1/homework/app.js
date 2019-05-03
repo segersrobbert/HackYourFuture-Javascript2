@@ -57,7 +57,7 @@
 // Usage
 bookList();
 
- /*1.4 Make an object (not an array!) containing information for each book. Each property of this object should be another (i.e., nested) object with the book ID you thought up in step 1.1 as a key, and at least the following properties: title, language and author.
+//1.4 Make an object (not an array!) containing information for each book. Each property of this object should be another (i.e., nested) object with the book ID you thought up in step 1.1 as a key, and at least the following properties: title, language and author.
   
   const favorites = {
     "good_strategy_bad_strategy" : {
@@ -120,4 +120,4 @@ bookList();
       language: "English",
       tobuy: "https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239/ref=sr_1_1?keywords=good_strategy_bad_strategy&qid=1556662815&s=gateway&sr=8-1"
     }
-  };*/
+  };

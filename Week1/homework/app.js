@@ -47,7 +47,7 @@
       const listItem = document.createElement('li');
 
       // Add the item text
-      listItem.innerHTML = myBookTitles[i];
+      listItem.innerHTML = bookTitles[i];
 
       // Add listItem to the listElement
       listElement.appendChild(listItem);

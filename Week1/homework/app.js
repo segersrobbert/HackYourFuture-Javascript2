@@ -70,17 +70,18 @@
     }
   };
   // Replace with your own code
-  function generateList() {
-    const newList = document.createElement('ul');
-    for (let i = 0; i < bookTitles.length; i++) {
-      const book = bookTitles[i];
-      newList.innerHTML += `<li>${book}</li>`;
-    }
+  //1.3 section
+  //function generateList() {
+  // const newList = document.createElement('ul');
+  //  for (let i = 0; i < bookTitles.length; i++) {
+  //   const book = bookTitles[i];
+  //    newList.innerHTML += `<li>${book}</li>`;
+  // }
 
-    return newList;
-  }
+  //   return newList;
+  //}
 
-  document.body.append(generateList());
+  //document.body.append(generateList());
   
   
   const bookCovers = {
@@ -95,4 +96,45 @@
     antoine_de_saint_exupery_little_prince: './bookcovers/thelittleprince.jpg',
     geronimo_stilton_lost_treasure_ofthe_emerald_eye: './bookcovers/geronimostilton.jpg'
   };
+  //1.5 section
+  function generateList() {
+    const newList = document.createElement("ul");
+    for (var key in bookInformations) {
+      const titleText = bookInformations[key].title;
+      const authorText = bookInformations[key].author;
+      const languageText = bookInformations[key].language;
+      const titleElement = document.createElement("h3");
+      const image = document.createElement('img');
+      image.setAttribute('src', bookCovers[key]);
+      image.setAttribute('alt', key);
+      image.setAttribute('width', '70%');
+      const authorElement = document.createElement("p");
+      const languageElement = document.createElement("p");
+      const li = document.createElement("li");
+      titleElement.innerHTML = titleText;
+      authorElement.innerHTML = authorText;
+      languageElement.innerHTML = languageText;
+      li.appendChild(titleElement);
+      li.appendChild(image);
+      li.appendChild(authorElement);
+      li.appendChild(languageElement);
+      newList.appendChild(li);
+    }
+    return newList;
+  }
+  document.body.append(generateList());
+
+  const imageOver = document.querySelector('header');
+  imageOver.addEventListener("mouseover", mouseOver);
+  imageOver.addEventListener("mouseout", mouseOut);
+  function mouseOver() {
+    imageOver.style.color = 'blue';
+  }
+  function mouseOut() {
+    imageOver.style.color = 'black';
+  }
+
+
 }
+
+

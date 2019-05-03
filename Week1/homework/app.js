@@ -105,6 +105,14 @@ const h1 = document.createElement('h1');
 h1.innerHTML = 'Book List';
 h1.classList.add("book-header");
 title.appendChild(h1);
+h1.addEventListener("mouseover", () => {
+  h1.style.backgroundColor = "red";
+  h1.style.color = "black";
+});
+h1.addEventListener("mouseout", () => {
+  h1.style.color = "blue";
+  h1.style.backgroundColor = "white";
+});
 
 //1.5 Now change the function from step 1.3 that you used to display the book ID's in a list to take the actual information about the book from the object and display that.
 

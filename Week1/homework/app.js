@@ -1,11 +1,23 @@
-'use strict';
+<!-- replace this with your HTML content -->
+<!DOCTYPE!html>
+ 
 
-{
-  const bookTitles = [
-    // Replace with your own book titles
-    'harry_potter_chamber_secrets',
-  ];
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-  // Replace with your own code
-  console.log(bookTitles);
-}
+  <title>Booklist</title>
+  <meta name="description" content="Booklist">
+  <meta name="author" content="Frisca Julia">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+  <header>Book List</header>                                                     
+  <ul></ul>                                                   
+</body>
+  <script src="app.js"></script>                                                    
+                                                      
+</html>

@@ -31,7 +31,7 @@
   
  // 1.3 Remove the temporary console.log from step 1.1. Make a function (or functions) that generate a ul with li elements for each book ID in the array using a for loop. 
  
-  const listContainer= document.getElementById('books');
+  const listContainer= document.createElement('div');
 
   // Make the list
   const listElement = document.createElement('ul');

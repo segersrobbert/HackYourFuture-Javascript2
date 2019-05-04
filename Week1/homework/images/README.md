@@ -1,2 +1,2 @@
 
-![](images.AwakenTheGiantWithin.jpg)
+<img src="AwakenTheGiantWithin.jpg">

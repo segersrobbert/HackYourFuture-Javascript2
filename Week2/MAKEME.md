@@ -36,6 +36,14 @@ console.log(doubleOddNumbers(myNumbers)); // ==> [2, 6]
 
 Rewrite the above `doubleOddNumbers` function using `map` and `filter`; don't forget to use `=>`.
 
+
+```js 
+const myNumbers = [1, 2, 3, 4];
+const newNumbers =[];
+
+myNumbers.filter(num => num%2 !=0).map(num => newNumbers.push(num*2));
+
+```
 ---
 
 **1.2** Underneath you see a very interesting small insight in Maartje's work:

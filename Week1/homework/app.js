@@ -69,19 +69,7 @@
       language: ''
     }
   };
-  // Replace with your own code
-  //1.3 section
-  //function generateList() {
-  // const newList = document.createElement('ul');
-  //  for (let i = 0; i < bookTitles.length; i++) {
-  //   const book = bookTitles[i];
-  //    newList.innerHTML += `<li>${book}</li>`;
-  // }
 
-  //   return newList;
-  //}
-
-  //document.body.append(generateList());
   
   
   const bookCovers = {
@@ -96,7 +84,12 @@
     antoine_de_saint_exupery_little_prince: './bookcovers/thelittleprince.jpg',
     geronimo_stilton_lost_treasure_ofthe_emerald_eye: './bookcovers/geronimostilton.jpg'
   };
+ 
+  
   //1.5 section
+  
+  
+  
   function generateList() {
     const newList = document.createElement("ul");
     for (var key in bookInformations) {
@@ -124,6 +117,8 @@
   }
   document.body.append(generateList());
 
+ 
+  
   const imageOver = document.querySelector('header');
   imageOver.addEventListener("mouseover", mouseOver);
   imageOver.addEventListener("mouseout", mouseOut);

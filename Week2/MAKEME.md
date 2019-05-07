@@ -139,11 +139,37 @@ If that's the case, try and fix the error. When done, run the tests again: `npm 
 
 Repeat the previous step until all (= 2 in this case) tests pass.
 
-## Step 3: ROVER
+### Step 3: Array exercises
+_Deadline Friday_
+
+- Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+- Write a JavaScript program to find the most frequent item of an array.
+- Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX’.
+
+##### BONUS
+
+Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+
+### Step 4: JSON exercises
+_Deadline Friday_
+- Write a JavaScript function to check if an object contains given property.
+- Write a JavaScript program to get the length (amount of keys) of a JavaScript object.
+
+##### BONUS
+
+Write a JavaScript program to create a Clock.
+Console, every second :”14:37:42”,”14:37:43", “14:37:44”, "14:37:45" 
+
+### Step 5: ROVER (bonus)
 
 Finish up to chapter 7: JSON on [roverjs.com](http://roverjs.com/)!
 
-## Step 4: **Some freeCodeCamp challenges:**
+
+## Step 6: ROVER
+
+Finish up to chapter 7: JSON on [roverjs.com](http://roverjs.com/)!
+
+## Step 7: **Some freeCodeCamp challenges:**
 
 _Deadline Saturday_
 
@@ -153,7 +179,7 @@ _Deadline Saturday_
 
 3. [Use the map Method to Extract Data from an Array](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array)
 
-## Step 5: Read before next lecture
+## Step 8: Read before next lecture
 
 _Deadline Sunday morning_
 

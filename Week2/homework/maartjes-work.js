@@ -48,7 +48,7 @@ console.log(maartjesTasks);
 const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
-    // Replace this comment and the next line with your code
+    // Replace this comment and the next line with your code.
     //STEP 1-A new array created from the durations
     const durationsInHours = tasks.map(elem => elem.duration / 60);
     //STEP 2- The durations less than 2 hours are filtered out.

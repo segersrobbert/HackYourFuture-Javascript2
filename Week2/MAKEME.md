@@ -36,11 +36,19 @@ console.log(doubleOddNumbers(myNumbers)); // ==> [2, 6]
 
 Rewrite the above `doubleOddNumbers` function using `map` and `filter`; don't forget to use `=>`.
 
+
+```js 
+const myNumbers = [1, 2, 3, 4];
+const newNumbers =[];
+
+myNumbers.filter(num => num%2 !=0).map(num => newNumbers.push(num*2));
+
+```
 ---
 
 **1.2** Underneath you see a very interesting small insight in Maartje's work:
 
-```js
+```js 
 const monday = [
   {
     name: 'Write a summary HTML/CSS',
@@ -96,6 +104,14 @@ Follow these steps. Each step should build on the result of the previous step.
 - Output a formatted Euro amount, rounded to Euro cents, e.g: `€11.34`.
 - Choose variable and parameters names that most accurately describe their contents or purpose. When naming an array, use a plural form, e.g. `durations`. For a single item, use a singular form, e.g. `duration`. For details, see [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md).
 - Don't forget to use `=>`.
+
+
+```js
+http://pythontutor.com/live.html#code=const%20monday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Write%20a%20summary%20HTML/CSS',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20web%20development',%0A%20%20%20%20duration%3A%20120%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Fix%20homework%20for%20class10',%0A%20%20%20%20duration%3A%2020%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D%0A%5D%3B%0A%0Aconst%20tuesday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Keep%20writing%20summary',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20more%20web%20development',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Staring%20out%20the%20window',%0A%20%20%20%20duration%3A%2010%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Look%20at%20application%20assignments%20new%20students',%0A%20%20%20%20duration%3A%2040%0A%20%20%7D%0A%5D%3B%0A%0A%20%20%20%20%0Aconst%20mondayDur%20%3D%20monday.map%28%28element%29%3D%3E%7B%0A%20%20%20%20%20%20return%20element.duration%3B%0A%20%20%7D%20%29.filter%28dur%20%3D%3E%20dur%3C120%29%0Aconst%20TuesdayDur%20%3D%20tuesday.map%28%28element%29%3D%3E%7B%0A%20%20%20%20%20%20return%20element.duration%3B%0A%20%20%7D%20%29.filter%28dur%20%3D%3E%20dur%3C120%29&cumulative=false&curInstr=42&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false
+```
+ 
+
+
 
 ### Step 2: Array exercises
 _Deadline Friday_

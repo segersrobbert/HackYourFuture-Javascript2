@@ -1,4 +1,4 @@
-## Homework Week 2
+# Homework Week 2
 
 ```
 Topics discussed this week:
@@ -11,7 +11,7 @@ Topics discussed this week:
 
 > [Here](/Week3/README.md) you find the readings you have to complete before the third lecture.
 
-## Step 1: More map, filter and `=>`
+### Step 1: More map, filter and `=>`
 
 _Deadline Wednesday_
 
@@ -48,7 +48,7 @@ myNumbers.filter(num => num%2 !=0).map(num => newNumbers.push(num*2));
 
 **1.2** Underneath you see a very interesting small insight in Maartje's work:
 
-```js
+```js 
 const monday = [
   {
     name: 'Write a summary HTML/CSS',
@@ -105,59 +105,41 @@ Follow these steps. Each step should build on the result of the previous step.
 - Choose variable and parameters names that most accurately describe their contents or purpose. When naming an array, use a plural form, e.g. `durations`. For a single item, use a singular form, e.g. `duration`. For details, see [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md).
 - Don't forget to use `=>`.
 
+
 ```js
 http://pythontutor.com/live.html#code=const%20monday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Write%20a%20summary%20HTML/CSS',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20web%20development',%0A%20%20%20%20duration%3A%20120%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Fix%20homework%20for%20class10',%0A%20%20%20%20duration%3A%2020%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D%0A%5D%3B%0A%0Aconst%20tuesday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Keep%20writing%20summary',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20more%20web%20development',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Staring%20out%20the%20window',%0A%20%20%20%20duration%3A%2010%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Look%20at%20application%20assignments%20new%20students',%0A%20%20%20%20duration%3A%2040%0A%20%20%7D%0A%5D%3B%0A%0A%20%20%20%20%0Aconst%20mondayDur%20%3D%20monday.map%28%28element%29%3D%3E%7B%0A%20%20%20%20%20%20return%20element.duration%3B%0A%20%20%7D%20%29.filter%28dur%20%3D%3E%20dur%3C120%29%0Aconst%20TuesdayDur%20%3D%20tuesday.map%28%28element%29%3D%3E%7B%0A%20%20%20%20%20%20return%20element.duration%3B%0A%20%20%7D%20%29.filter%28dur%20%3D%3E%20dur%3C120%29&cumulative=false&curInstr=42&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false
 ```
+ 
 
-## Step 2: Testing your homework
 
-We have provided _unit tests_ in this repo that allow you to verify that your homework produces the expected results.
 
-> **Unit test**: A _unit test_ is a piece of code (usually a function) that invokes another piece of code and checks the correctness of some assumptions afterwards. If the assumptions turn out to be wrong, the unit test has failed. A 'unit' is a method or function.
->
-> Adapted from: Roy Osherove (1.09), The art of Unit Testing. Greenwich, CT: Manning.
+### Step 2: Array exercises
+_Deadline Friday_
 
-At this point it is not important to understand how unit tests work. The only thing you need to know now is how to run the tests and how to determine whether your homework produces the correct results.
+- Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+- Write a JavaScript program to find the most frequent item of an array.
+- Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX’.
 
-#### Run the tests
+##### BONUS
 
-You can test your week 2 homework by typing this command in the terminal window:
+Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
 
-```
-npm run test-week2
-```
+### Step 3: JSON exercises
+_Deadline Friday_
+- Write a JavaScript function to check if an object contains given property.
+- Write a JavaScript program to get the length (amount of keys) of a JavaScript object.
 
-You will see some output appearing in the console while the tests run. If all is well (no errors), the last couple of lines will look like this:
+##### BONUS
 
-```
-Test Suites: 2 passed, 2 total
-Tests:       2 passed, 2 total
-Snapshots:   0 total
-Time:        1.849s
-Ran all test suites matching /Week2\//i.
-```
+Write a JavaScript program to create a Clock.
+Console, every second :”14:37:42”,”14:37:43", “14:37:44”, "14:37:45" 
 
-In case of unexpected results, say from _Maartjes work_ assignment, you might see something like this (you may need to scroll up a bit):
-
-```
-Test Suites: 1 failed, 1 passed, 2 total
-Tests:       1 failed, 1 passed, 2 total
-Snapshots:   0 total
-Time:        1.255s
-Ran all test suites matching /Week2\//i.
-```
-
-If that's the case, try and fix the error. When done, run the tests again: `npm run test-week2`
-
-Repeat the previous step until all (= 2 in this case) tests pass.
-
-## Step 3: ROVER
+### Step 4: ROVER (bonus)
 
 Finish up to chapter 7: JSON on [roverjs.com](http://roverjs.com/)!
 
-## Step 4: **Some freeCodeCamp challenges:**
+### Step 5: **Some FreeCodeCamp challenges:** (bonus)
 
-_Deadline Saturday_
 
 1. [Comparisons with the Logical And Operator](https://www.freecodecamp.com/challenges/comparisons-with-the-logical-and-operator)
 
@@ -165,21 +147,21 @@ _Deadline Saturday_
 
 3. [Use the map Method to Extract Data from an Array](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array)
 
-## Step 5: Read before next lecture
 
-_Deadline Sunday morning_
-
-Go trough the reading material in the [README.md](/Week3/README.md) to prepare for your next class
-
-### How to hand in your homework:
+## How to hand in your homework:
 
 Go over your homework one last time:
 
-- Does your homework pass all the unit tests?
+- Is your code properly formatted?
 - Does every file start with `'use strict';`?
 - Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md)?
-- Have you resolved all issues flagged by ESLint and the spell checker (no wavy red and green underlines in VSCode)?
+- Have you resolved all issues flagged by ESLint and the spell checker plugins (no wavy red and green underlines in VSCode)?
+- Create  **1 NEW PULL REQUEST** containing all of this homework 
 
-If the answer is 'yes' to all preceding questions you are ready to follow these instructions:
+Here is a refresher on the needed GIT commands & workflow:
 
 - [Handing in homework](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/homework_pr.md)
+
+</br></br>
+
+#### Good luck students!

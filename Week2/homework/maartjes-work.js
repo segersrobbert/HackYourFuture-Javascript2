@@ -46,7 +46,13 @@ const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
+  const durations= maartjesTasks.map(tasks=> tasks.duration);
+  const durationsInHours = durations.map(durations =>durations/60);
+  const moreThanTwoHours = durationsInHours.filter( val => val >= 2);
+  const totalSum = moreThanTwoHours.reduce((sum,val)=> {
+    return sum + (val * hourlyRate);
+    },0);
+  return totalSum.toFixed(2);
   console.log(tasks, hourlyRate);
 }
 
@@ -55,7 +61,7 @@ const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
 
 // add code to convert `earnings` to a string rounded to two decimals (euro cents)
 
-console.log(`Maartje has earned €${'replace this string with the earnings rounded to euro cents'}`);
+console.log(`Maartje has earned €${earnings}`);
 
 // Do not change or remove anything below this line
 module.exports = {

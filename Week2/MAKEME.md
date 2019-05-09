@@ -105,13 +105,22 @@ Follow these steps. Each step should build on the result of the previous step.
 - Choose variable and parameters names that most accurately describe their contents or purpose. When naming an array, use a plural form, e.g. `durations`. For a single item, use a singular form, e.g. `duration`. For details, see [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md).
 - Don't forget to use `=>`.
 
+  - [pytut](http://tinyurl.com/y4vcq84s)
 
 ```js
-http://pythontutor.com/live.html#code=const%20monday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Write%20a%20summary%20HTML/CSS',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20web%20development',%0A%20%20%20%20duration%3A%20120%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Fix%20homework%20for%20class10',%0A%20%20%20%20duration%3A%2020%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D%0A%5D%3B%0A%0Aconst%20tuesday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Keep%20writing%20summary',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20more%20web%20development',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Staring%20out%20the%20window',%0A%20%20%20%20duration%3A%2010%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Look%20at%20application%20assignments%20new%20students',%0A%20%20%20%20duration%3A%2040%0A%20%20%7D%0A%5D%3B%0A%0A%20%20%20%20%0Aconst%20mondayDur%20%3D%20monday.map%28%28element%29%3D%3E%7B%0A%20%20%20%20%20%20return%20element.duration%3B%0A%20%20%7D%20%29.filter%28dur%20%3D%3E%20dur%3C120%29%0Aconst%20TuesdayDur%20%3D%20tuesday.map%28%28element%29%3D%3E%7B%0A%20%20%20%20%20%20return%20element.duration%3B%0A%20%20%7D%20%29.filter%28dur%20%3D%3E%20dur%3C120%29&cumulative=false&curInstr=42&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false
-```
-
-```js
-http://pythontutor.com/live.html#code=const%20monday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Write%20a%20summary%20HTML/CSS',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20web%20development',%0A%20%20%20%20duration%3A%20120%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Fix%20homework%20for%20class10',%0A%20%20%20%20duration%3A%2020%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D%0A%5D%3B%0A%0Aconst%20tuesday%20%3D%20%5B%0A%20%20%7B%0A%20%20%20%20name%3A%20'Keep%20writing%20summary',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Some%20more%20web%20development',%0A%20%20%20%20duration%3A%20180%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Staring%20out%20the%20window',%0A%20%20%20%20duration%3A%2010%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Talk%20to%20a%20lot%20of%20people',%0A%20%20%20%20duration%3A%201.0%0A%20%20%7D,%0A%20%20%7B%0A%20%20%20%20name%3A%20'Look%20at%20application%20assignments%20new%20students',%0A%20%20%20%20duration%3A%2040%0A%20%20%7D%0A%5D%3B%0A%0Aconst%20maartjesTasks%20%3D%20monday.concat%28tuesday%29%3B%0A%0Aconst%20convertHours%20%3D%20maartjesTasks.map%28element%20%3D%3Eelement.duration/60%29.filter%28x%3D%3Ex%3C%3D2%29%0A%0A%0A&cumulative=false&curInstr=41&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false
+//Array concat
+const maartjesTasks = monday.concat(tuesday);
+function calculateEarnings(){
+//Map the tasks to durations in hours.
+const convertHours = maartjesTasks.map(element =>element.duration/60)
+//Filter out everything that took less than two hours (i.e., remove from the collection)
+.filter(element=>element<=2)
+//Multiply the each duration by a per-hour rate for billing (use €20/hour) and sum it all up.
+const earnedMoney = convertHours.reduce((sum, elem) => sum + elem * 20, 0);
+//Output a formatted Euro amount, rounded to Euro cents, e.g: €11.34.
+return `${earnedMoney.toFixed(2)}`;
+}
+console.log(calculateEarnings());
 ```
  
 

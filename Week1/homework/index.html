@@ -1,16 +1,65 @@
-<!-- replace this with your HTML content -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Book titles</title>
-</head>
-<body>
-    <div id="div">
 
-    </div>
+<html>
+
+<body>
+
+  <ul id="myList">
+  </ul>
+
+  <p>Click the button to show the list of books</p>
+
+  <button onclick="myFunction()">Show books</button>
+
+  <script>
+
+    var books = [
+      'harry_potter_chamber_secrets',
+      'small_island',
+      'spook_street',
+      'war_and_peace',
+      'don_quixote',
+      'a_tale_of_two_cities',
+      'the_lord_of_the_rings',
+      'harry_potter_and_the_secret_stone',
+      'and_then_there_were_none',
+      'the_hobbit',
+    ].reduce((ac, cv, i) => Object.assign(ac, { [cv]: { author: 'somebody', language: 'english' } }), {});
+
+    function myFunction() {
+      var UL = document.createElement("UL");
+
+      for (bookname in books) {
+        var book_name = bookname.split('_').join(' ').toUpperCase();
+        var book = books[bookname];
+        var LI = document.createElement("LI");
+        var TX = document.createTextNode(book_name);
+        LI.appendChild(TX);
+
+        UL.appendChild(TX);
+
+        var _UL = document.createElement("UL");
+
+        var I1 = document.createElement("LI");
+        var t1 = document.createTextNode('author: ' + book.author);
+        I1.appendChild(t1);
+
+        var I2 = document.createElement("LI");
+        var t2 = document.createTextNode('language: ' + book.language);
+        I2.appendChild(t2);
+
+        _UL.appendChild(I1);
+        _UL.appendChild(I2);
+
+        UL.appendChild(document.createElement("LI").appendChild(_UL));
+
+      }
+
+      document.getElementById("myList").appendChild(UL);
+    }
+  </script>
+
+
 </body>
-<script src="app.js"></script>
+
 </html>

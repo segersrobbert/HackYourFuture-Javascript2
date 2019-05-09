@@ -1,6 +1,6 @@
 //Write a JavaScript function to get the first element of an array.
 
-const arr = [1, 2, 3, 4];
+/*const arr = [1, 2, 3, 4];
 const getFirstElement = arr => arr.shift();
 console.log(getFirstElement(arr));
 
@@ -8,7 +8,13 @@ console.log(getFirstElement(arr));
 
 const arr1 = [1, 2, 3, 4];
 const getFirstNElements = (x, n) => x.slice(0, n);
-console.log(getFirstNElements(arr1, 3));
+console.log(getFirstNElements(arr1, 3));*/
+
+//combined solution with default parameter
+
+const getElements = (x, n = 1) => x.slice(0, n);
+console.log(getElements(arr1));
+console.log(getElements(arr1, 3));
 
 //Write a JavaScript program to find the most frequent item of an array.
 

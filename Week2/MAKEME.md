@@ -105,6 +105,7 @@ Follow these steps. Each step should build on the result of the previous step.
 - Choose variable and parameters names that most accurately describe their contents or purpose. When naming an array, use a plural form, e.g. `durations`. For a single item, use a singular form, e.g. `duration`. For details, see [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md).
 - Don't forget to use `=>`.
 
+
   - [pytut](http://tinyurl.com/y4vcq84s)
 
 ```js
@@ -218,6 +219,26 @@ console.log(hasKey({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}, "green"
 - Write a JavaScript program to get the length (amount of keys) of a JavaScript object.
 [link](https://www.w3resource.com/javascript-exercises/javascript-object-exercise-3.php)
 ##### BONUS
+
+=======
+### Step 2: Array exercises
+_Deadline Friday_
+
+- Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+- Write a JavaScript program to find the most frequent item of an array.
+- Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX’.
+
+##### BONUS
+
+Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+
+### Step 3: JSON exercises
+_Deadline Friday_
+- Write a JavaScript function to check if an object contains given property.
+- Write a JavaScript program to get the length (amount of keys) of a JavaScript object.
+
+##### BONUS
+
 
 Write a JavaScript program to create a Clock.
 Console, every second :”14:37:42”,”14:37:43", “14:37:44”, "14:37:45" 

@@ -55,7 +55,6 @@ function computeEarnings(tasks, hourlyRate) {
   return totalSum.toFixed(2);
   console.log(tasks, hourlyRate);
 }
-
 // eslint-disable-next-line no-unused-vars
 const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
 

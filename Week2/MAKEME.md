@@ -41,7 +41,9 @@ Rewrite the above `doubleOddNumbers` function using `map` and `filter`; don't fo
 const myNumbers = [1, 2, 3, 4];
 const newNumbers =[];
 
-myNumbers.filter(num => num%2 !=0).map(num => newNumbers.push(num*2));
+myNumbers
+.filter(num => num%2 !=0)
+.map(num => newNumbers.push(num*2));
 
 ```
 ---
@@ -178,10 +180,10 @@ console.log(firstElement([7, 9, 0, -2],-3));
 ```
 
 - Write a JavaScript program to find the most frequent item of an array.
-[link](https://www.w3resource.com/javascript-exercises/javascript-array-exercise-8.php)
+  [link](https://www.w3resource.com/javascript-exercises/javascript-array-exercise-8.php)
 
 - Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX’.
-[link](https://www.w3resource.com/javascript-exercises/javascript-array-exercise-9.php)
+  [link](https://www.w3resource.com/javascript-exercises/javascript-array-exercise-9.php)
 ##### BONUS
 
 Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
@@ -220,28 +222,10 @@ console.log(hasKey({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}, "green"
 [link](https://www.w3resource.com/javascript-exercises/javascript-object-exercise-3.php)
 ##### BONUS
 
-=======
-### Step 2: Array exercises
-_Deadline Friday_
-
-- Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
-- Write a JavaScript program to find the most frequent item of an array.
-- Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX’.
-
-##### BONUS
-
-Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
-
-### Step 3: JSON exercises
-_Deadline Friday_
-- Write a JavaScript function to check if an object contains given property.
-- Write a JavaScript program to get the length (amount of keys) of a JavaScript object.
-
-##### BONUS
-
-
 Write a JavaScript program to create a Clock.
 Console, every second :”14:37:42”,”14:37:43", “14:37:44”, "14:37:45" 
+
+   [link](https://www.w3resource.com/javascript-exercises/javascript-object-exercise-8.php)
 
 ### Step 4: ROVER (bonus)
 

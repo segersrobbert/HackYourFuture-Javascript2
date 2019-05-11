@@ -1,5 +1,4 @@
 /* add your styling here */
-/* add your styling here */
 
 body {
     background-color: aquamarine;
@@ -8,6 +7,13 @@ img {
     width: 100%;
     height: 2rem;
 
+}
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+  margin: 0 auto;
 }
 header {
     font-size: 50px;
@@ -35,4 +41,6 @@ header {
   h3:hover {
     color: peru;
   }
-  
+  div{
+      margin: 10px;
+  }

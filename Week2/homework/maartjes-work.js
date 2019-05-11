@@ -47,7 +47,17 @@ const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
   // Replace this comment and the next line with your code
-  console.log(tasks, hourlyRate);
+  function computeEarnings(tasks, hourlyRate) {
+    return maartjesTasks.map(task => task.duration)
+    //change from seconds to hours
+    .map(durationMinutes => durationMinutes/60)
+    //filter less than 2 hours
+    .filter(durationHour => durationHour >= 2)
+    //calculate the billing and sum up
+    .map(durationHour => durationHour * 20)
+    .reduce((sumUp, salary) => sumUp + salary)
+    .toFixed(2);
+   }
 }
 
 // eslint-disable-next-line no-unused-vars

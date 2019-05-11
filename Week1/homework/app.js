@@ -73,3 +73,4 @@ booksCover.src = `./images${book.id}.jpg`;
 // 
 booksCover.alt = book.title;
 listElement.appendChild(booksCover);
+}

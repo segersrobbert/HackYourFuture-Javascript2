@@ -20,18 +20,27 @@ _Deadline Wednesday_
 Your solution could be something like this:
 
 ```js
-function doubleOddNumbers(numbers) {
-  const newNumbers = [];
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 !== 0) {
-      newNumbers.push(numbers[i] * 2);
-    }
-  }
-  return newNumbers;
-}
 
+const doubleOddNumbers = (numbers) => {
+const oddNumbers = myNumbers.filter(num => {
+  return num % 2 !== 0 
+});
+const newNumbers = oddNumbers.map((value) => {
+  return value * 2;
+});
+
+console.log(newNumbers);
+}
 const myNumbers = [1, 2, 3, 4];
-console.log(doubleOddNumbers(myNumbers)); // ==> [2, 6]
+console.log(doubleOddNumbers(myNumbers));
+
+// Do not change or remove anything below this line
+module.exports = {
+  myNumbers,
+  doubleOddNumbers,
+};
+
+
 ```
 
 Rewrite the above `doubleOddNumbers` function using `map` and `filter`; don't forget to use `=>`.
@@ -101,8 +110,67 @@ Follow these steps. Each step should build on the result of the previous step.
 _Deadline Friday_
 
 - Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+
+```js
+
+const firstElement =  (array, n) => {
+      if (array == null) 
+      return void 0;
+    if (n == null) 
+      return array[0];
+    if (n < 0)
+      return [];
+    return array.slice(0, n);
+  };
+
+console.log(firstElement([7, 9, 0, -2]));
+/*
+console.log(firstElement([],3));
+console.log(firstElement([7, 9, 0, -2],3));
+console.log(firstElement([7, 9, 0, -2],6));
+console.log(firstElement([7, 9, 0, -2],-3));
+*/
+```
+
 - Write a JavaScript program to find the most frequent item of an array.
+
+```js
+
+const arr1=[3, 'a', 'a', 'a', 2, 3];
+let mf = 1;
+let m = 0;
+let item;
+for (let i=0; i<arr1.length; i++)
+{
+        for (let j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+console.log(`${item} ( ${mf} times ) `) ;
+
+
+```
+
 - Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX’.
+
+```js
+
+const swapcase = (str) => {
+        return str.replace(/([a-z]+)|([A-Z]+)/g, (match, chr) => {
+            return chr ? match.toUpperCase() : match.toLowerCase();
+        });
+    }
+console.log(swapcase('The Quick Brown Fox')); //tHE qUICK bROWN fOX
+
+```
 
 ##### BONUS
 
@@ -111,7 +179,37 @@ Write a JavaScript program which accept a number as input and insert dashes (-) 
 ### Step 3: JSON exercises
 _Deadline Friday_
 - Write a JavaScript function to check if an object contains given property.
+
+```js
+
+function person(obj, key) {
+    return obj != null && hasOwnProperty.call(obj, key);
+  }
+console.log(person({ name: "John", age: 31, city: "New York" }, "age"));
+
+```
+
 - Write a JavaScript program to get the length (amount of keys) of a JavaScript object.
+
+```js
+
+Object.objsize = function(Myobj) {
+    let osize = 0, key;
+    for (key in Myobj) {
+        if (Myobj.hasOwnProperty(key)) osize++;
+    }
+    return osize;
+};
+
+const person = { 
+name : "John", 
+age: 31, 
+city: "New York" };
+
+const objsize = Object.objsize(person);
+console.log('The length of an object : '+objsize);
+
+```
 
 ##### BONUS
 

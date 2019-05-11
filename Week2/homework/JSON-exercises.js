@@ -1,3 +1,4 @@
+'use strict';
 //Write a JavaScript function to check if an object contains given property.
 ```js
 const testOfProperty = (object,prop) => 

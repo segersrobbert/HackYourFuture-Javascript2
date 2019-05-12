@@ -48,7 +48,7 @@ const maartjesHourlyRate = 20;
 function computeEarnings(tasks, hourlyRate) {
   // Replace this comment and the next line with your code
   //Map the tasks to durations in hours.
-  return maartjesTasks.map(tasks=> tasks.duration);
+  return maartjesTasks.map(tasks=> tasks.duration)
   .map(durations =>durations/60);
   //Filter out everything that took less than two hours (i.e., remove from the collection)
   .filter( val => val >= 2);

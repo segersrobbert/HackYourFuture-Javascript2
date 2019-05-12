@@ -50,7 +50,7 @@ function computeEarnings(tasks, hourlyRate) {
   const countedHours = durationInHrs.filter(x => x >= 2).map(x => +x.toFixed(2));
 
   console.log(countedHours); // console.log(tasks, hourlyRate);
-  return countedHours.reduce((acc, cv) => acc + cv * 20);
+  return countedHours.reduce((acc, cv) => acc + cv * hourlyRate);
 }
 
 // eslint-disable-next-line no-unused-vars

@@ -1,8 +1,8 @@
 'use strict';
 
 function foo(func) {
-  // What to do here?
-  // Replace this comment and the next line with your code
+  //Write a function that takes another function as an argument and runs it.
+
   console.log(func);
 }
 

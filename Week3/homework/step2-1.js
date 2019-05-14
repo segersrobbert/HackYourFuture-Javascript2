@@ -1,12 +1,11 @@
 'use strict';
 
-function foo(func) {
+const foo = func => {
   //Write a function that takes another function as an argument and runs it.
-
-  console.log(func);
+  func();
 }
 
-function bar() {
+const bar = () => {
   console.log('Hello, I am bar!');
 }
 

@@ -41,6 +41,7 @@ setTimeout(doIt, 5000);
 ```js
 function foo(func) {
   // What to do here?
+  func()
 }
 
 function bar() {

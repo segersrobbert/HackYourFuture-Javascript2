@@ -3,15 +3,15 @@
 const arr2d = [[1, 2], [3, 4], [5, 6]];
 const arr3d = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
 
-function flattenArray2d(arr) {
-  var merged = [].concat(...arr2d);
-  console.log(merged);
+const flattenArray2d = arr => {
+  return [].concat(...arr);
 }
 
-function flattenArray3d(arr) {
-  var merged2d = [].concat(...arr3d);
-  var merged3d = [].concat(...merged2d);
-  console.log(merged3d);
+const flattenArray3d = arr => {
+  //var merged = [].concat(...arr);
+  //return [].concat(...merge);
+  return [].concat(...[].concat(...arr));
+
 }
 
 console.log(flattenArray2d(arr2d)); // -> [1, 2, 3, 4, 5, 6]

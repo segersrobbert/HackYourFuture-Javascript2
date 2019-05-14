@@ -1,10 +1,8 @@
 'use strict';
 
-function createBase(base) {
-  return function(base1) {
-      return base + base1;
-    };
-}
+const createBase = base => {
+  return base1 => base + base1;
+};
 
 const addSix = createBase(6);
 

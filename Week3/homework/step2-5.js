@@ -3,6 +3,7 @@
 function multiplyAll(arr) {
   // eslint-disable-next-line
   let product = 1;
+  product = arr.flat().reduce((acc, cv) => acc * cv);
 
   // Replace this comment and the next line with your code
   console.log(arr, product);

@@ -1,23 +1,28 @@
 'use strict';
 
+function threeCallback() {
+  console.log('say three');
+}
+function fiveCallback() {
+  console.log('say five');
+}
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   const numbers = [];
-
-  // Replace this comment and the next line with your code
-  console.log(startIndex, stopIndex, threeCallback, fiveCallback, numbers);
+  for (let i = startIndex; i <= stopIndex; i++) {
+    numbers.push(i);
+  }
+  console.log(numbers);
+  numbers.forEach(num => {
+    if (num % 3 === 0) {
+      threeCallback();
+    }
+    if (num % 5 === 0) {
+      fiveCallback();
+    }
+  });
 }
 
-function sayThree(number) {
-  // Replace this comment and the next line with your code
-  console.log(number);
-}
-
-function sayFive(number) {
-  // Replace this comment and the next line with your code
-  console.log(number);
-}
-
-threeFive(10, 15, sayThree, sayFive);
+threeFive(10, 15, threeCallback, fiveCallback);
 
 // Do not change or remove anything below this line
 module.exports = threeFive;

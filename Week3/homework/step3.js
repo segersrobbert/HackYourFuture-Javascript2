@@ -1,6 +1,9 @@
 'use strict';
 
 function createBase(base) {
+  return function(y) {
+    return base + y;
+  };
   // Replace this comment and the next line with your code
   console.log(base);
 }

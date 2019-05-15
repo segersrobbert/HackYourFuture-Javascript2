@@ -80,6 +80,44 @@ threeFive(10, 15, sayThree, sayFive);
 // please make sure you see why these calls are made before you start coding
 ```
 
+   Solution 
+   ```js 
+   'use strict';
+
+
+function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
+    const numbers = [];
+    for (let i = startIndex; i <= stopIndex; i++) {
+        numbers.push(i);
+        if (i % 3 === 0) {
+            threeCallback(i);
+        }
+        if (i % 5 === 0) {
+            fiveCallback(i);
+        }
+    }
+
+
+    console.log(numbers);
+}
+
+
+
+
+function sayThree(number) {
+    console.log(`${number} is divisible by 3`);
+
+}
+
+function sayFive(number) {
+    console.log(`${number} is divisible by 5`);
+
+}
+
+threeFive(10, 15, sayThree, sayFive);
+   ```
+    
+
 > Note: The following assignments include some problems from _freeCodeCamp_. Note that some _freeCodeCamp_ examples still mention `var`. However you can safely replace them with `let` and `const` as appropriate.
 
 **2.3** Please solve this problem:

@@ -1,9 +1,9 @@
 'use strict';
 
-function createBase(base) {
-  // Replace this comment and the next line with your code
-  console.log(base);
-}
+
+const createBase = num => {
+  return item => num + item;
+}; // Replace this comment and the next line with your code
 
 const addSix = createBase(6);
 

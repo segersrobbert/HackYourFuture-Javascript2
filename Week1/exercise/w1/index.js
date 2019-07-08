@@ -1,4 +1,5 @@
 console.log('Hack your future Belgium!');
+console.dir();
 
 // EXERCISE 1
 
@@ -11,6 +12,14 @@ console.log('Hack your future Belgium!');
 
 // 1c: change the inner html of the header element to your name
 
+function changeHeader() {
+  console.log('function header in console to test');
+  var header = document.querySelector('h1');
+  // getElementByTagName("h1")[0];
+
+  header.innerHTML = "Nelson Najarro  ";
+}
+document.getElementById("Change-header").addEventListener("click", changeHeader);
 
 // ====================================== //
 
@@ -29,6 +38,14 @@ console.log('Hack your future Belgium!');
 
 // 2e: to change the image: assign the imageInputValue to the image src
 
+function changeImage() {
+  console.log('function changeImage in console to test');
+  var imageInputValue = document.querySelector('input');
+  var imageToChange = document.querySelector('img');
+  imageToChange.src = imageInputValue.value;
+}
+
+document.getElementById("btn-changeImage").addEventListener("click", changeImage);
 
 // ====================================== //
 
@@ -48,3 +65,22 @@ console.log('Hack your future Belgium!');
 // 3f: set created <li> element innerHtml to todoInput value
 
 // 3g: add <li> element to todoList
+
+function addTodo() {
+  var todoList = document.getElementById("todoList");
+  var todoInput = document.getElementById("todoInput");
+  console.log(todoInput.value);
+
+  // Create a <li> node
+  var liNode = document.createElement("LI");
+  // Create a text node
+  var textNode = document.createTextNode(todoInput.value);
+  // Append the text to <li>
+  liNode.appendChild(textNode);
+  // Append <li> to <ul> with id="todoList"
+  todoList.appendChild(liNode);
+}
+
+const Addbuton = document.getElementById("btn-addTodo");
+Addbuton.addEventListener("click", addTodo);
+

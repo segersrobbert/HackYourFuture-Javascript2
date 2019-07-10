@@ -1,7 +1,7 @@
 'use strict'
 {
-  // data
-  var library = {}
+  // Data
+  var objLibrary = {}
   var objImages = {}
   const BookTitles = [
     'the_old_man_and_the_sea',
@@ -15,30 +15,34 @@
     'one_hundred_years_of_solitude',
     'angels_and_demons'
   ]
-  // funtions
+  // Funtions
   function createElement(typeelment) {
     return document.createElement(typeelment)
   }
   function addToParent(parent, child) {
     return parent.appendChild(child)
   }
-
-  function addArrayToList(array, object) {
+  function addArrayAndObjectsToList(array, object, img) {
     var ul = createElement('UL')
     var textNodeTitle, textNodeAutor, textNodeLanguage
-    var olBook, h2Title, liAutor, liLanguage
+    var olBook, h2Title, liAutor, liLanguage, liImg, imgNode
     for (let value of array) {
       olBook = createElement('OL')
-      h2Title = createElement('h2')
+      h2Title = createElement('H2')
       liAutor = createElement('LI')
       liLanguage = createElement('LI')
+      liImg = createElement('LI')
+      imgNode = createElement('IMG')
       textNodeTitle = document.createTextNode(object[value].title)
       textNodeAutor = document.createTextNode(object[value].autor)
       textNodeLanguage = document.createTextNode(object[value].language)
+      imgNode.src = img[value]
       addToParent(h2Title, textNodeTitle)
+      addToParent(liImg, imgNode)
       addToParent(liAutor, textNodeAutor)
       addToParent(liLanguage, textNodeLanguage)
       addToParent(olBook, h2Title)
+      addToParent(olBook, liImg)
       addToParent(olBook, liAutor)
       addToParent(olBook, liLanguage)
       addToParent(ul, olBook)
@@ -144,7 +148,7 @@
           object[value] = './img/hamlet.jpg'
           break
         case 'the_odyssey':
-          object[value] = './img/the_old_man_and_the_sea.jpg'
+          object[value] = './img/odyssey.jpg'
           break
         case 'oedipus_the_king':
           object[value] = './img/oedipus.jpg'
@@ -162,9 +166,23 @@
     }
     return object
   }
+  function addHeader() {
+    var div = createElement('DIV')
+    var textNodeDiv = document.createTextNode('My Books')
+    addToParent(div, textNodeDiv)
+    addToParent(document.body, div)
+  }
+  function addfooter() {
+    var div = createElement('DIV')
+    var textNodeDiv = document.createTextNode('by NN - HYF JS2-W1')
+    div.setAttribute('id', 'footer')
+    addToParent(div, textNodeDiv)
+    addToParent(document.body, div)
+  }
   // Procedure
-  objImages = makeObjectImg(BookTitles)
-  library = makeLibrary(BookTitles)
-  addArrayToList(BookTitles, library)
-  console.log(objImages)
+  addHeader() // Add Header to the page
+  objImages = makeObjectImg(BookTitles) // Create obj with ubication of images
+  objLibrary = makeLibrary(BookTitles) // Create obj with books information
+  addArrayAndObjectsToList(BookTitles, objLibrary, objImages) // Add array and object to list ul/ol/li
+  addfooter() // Add footer to the page
 }

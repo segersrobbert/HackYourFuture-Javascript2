@@ -1,5 +1,4 @@
 'use strict';
-
 {
   const movieTitles = [
     'game_of_thrones','prison_break',
@@ -8,8 +7,7 @@
     'viking','in_to_the_badland',
     'milenu'
   ];
-  //==============================//
-  
+  //==========creating nested object====================//
   let movieInfo = {
     game_of_thrones: {
       title : 'Game of Thrones',
@@ -62,6 +60,7 @@
       author: 'Eritrean Government',
     },
   }
+  //creat object for the images
   let images = {
     game_of_thrones :{
       image: './image/game_of_thrones.jpg',

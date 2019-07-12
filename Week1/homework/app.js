@@ -145,10 +145,10 @@
       }  
     }
   }
-  function main(){
+ // function main(){
     domCreator(movieInfo, images)
-  }
-  window.addEventListener('load', main);
+ // }
+ // window.addEventListener('load', main);
   }
   
 

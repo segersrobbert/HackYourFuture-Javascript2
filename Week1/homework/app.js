@@ -1,8 +1,8 @@
 'use strict';
+
 {
-
-
-var myFavoriteBooks = [ "dostoyevsky_crime_and_punishment",
+ 
+const myFavoriteBooks = [ "dostoyevsky_crime_and_punishment",
 "george_orwell_animal_farm",
 "franz_kafka_metamorphosis",
 "sabahattin_ali_madonna_in_a_fur_coat",
@@ -131,10 +131,10 @@ function list_builder(){
 
     for (let key in myFavoriteBooksObj) {
 
-        let listItem = document.createElement('li');
+        const listItem = document.createElement('li');
         listElement.appendChild(listItem);
 
-        let header = document.createElement('h2');
+        const header = document.createElement('h2');
         header.innerHTML = myFavoriteBooksObj[key].title;
         listItem.appendChild(header);
         
@@ -143,24 +143,25 @@ function list_builder(){
         images.setAttribute("alt",key);
         listItem.appendChild(images);
 
-        let book_author = document.createElement('h3');
+        const book_author = document.createElement('h3');
         book_author.innerHTML = "Author: " + myFavoriteBooksObj[key].author;
         listItem.appendChild(book_author);
 
-        let book_genre = document.createElement('h3');
+        const book_genre = document.createElement('h3');
         book_genre.innerHTML = "Genre : " + myFavoriteBooksObj[key].genre;
         listItem.appendChild(book_genre);
 
-        let book_language = document.createElement('h3');
+        const book_language = document.createElement('h3');
         book_language.innerHTML = "Language: " + myFavoriteBooksObj[key].language;
         listItem.appendChild(book_language);
 
-        let book_published = document.createElement('h3');
+        const book_published = document.createElement('h3');
         book_published.innerHTML = "First Published: " + myFavoriteBooksObj[key].firstPublished;
         listItem.appendChild(book_published);
 
     }
  }
  list_builder();
+ 
 }
 

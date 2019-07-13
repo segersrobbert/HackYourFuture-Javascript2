@@ -1,1 +1,48 @@
-/* add your styling here */
+body {
+  background-color: #66d9ff;
+  font-family:Comic Sans MS, Comic Sans, cursive;
+  color:#4169E1;  
+  
+}
+div{
+  margin-left: 4%;
+}
+h1{
+  text-align: center;
+  padding: 1%;
+}
+
+
+img{
+   width: 70%; 
+   margin-left: 15%;
+} 
+
+ul  {
+    list-style: none;
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:2%;
+  }
+
+  li{
+    width: 300px;
+    margin: 7px;
+    background-color :#ccf2ff	;
+    padding: 1%;
+    border-radius:7%
+}
+
+h2 {
+  text-align:center
+}
+
+h3{
+  text-align:left;
+  line-height: 0.5;
+  padding-left:10%;
+}
+
+li:nth-child(10) {
+ margin:auto  
+}

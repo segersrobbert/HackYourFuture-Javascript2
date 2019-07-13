@@ -34,7 +34,7 @@ ul  {
 }
 
 h2 {
-  text-align:center
+  text-align:center;
 }
 
 h3{
@@ -44,5 +44,5 @@ h3{
 }
 
 li:nth-child(10) {
- margin:auto  
+ margin:auto ;
 }

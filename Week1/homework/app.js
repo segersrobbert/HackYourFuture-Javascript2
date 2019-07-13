@@ -1,3 +1,5 @@
+'use strict';
+
 
 var myFavoriteBooks = [ "dostoyevsky_crime_and_punishment",
 "george_orwell_animal_farm",

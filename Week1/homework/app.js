@@ -149,7 +149,8 @@
       // creat image tag
       const imgTag = document.createElement('img');
       // set src attribute 
-      imgTag.setAttribute('src', `${imageObject[x].image}`);
+      //imgTag.setAttribute('src', `${imageObject[x].image}`); why this is not working?
+      imgTag.src = imageObject[x].image;
       // set alt attribute 
       imgTag.setAttribute('alt', `${x}`);
       //add imaTag to li

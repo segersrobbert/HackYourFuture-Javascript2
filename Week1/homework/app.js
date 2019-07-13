@@ -1,4 +1,5 @@
 'use strict';
+{
 
 
 var myFavoriteBooks = [ "dostoyevsky_crime_and_punishment",
@@ -161,4 +162,5 @@ function list_builder(){
     }
  }
  list_builder();
+}
 

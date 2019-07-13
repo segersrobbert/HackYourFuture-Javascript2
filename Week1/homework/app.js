@@ -67,18 +67,22 @@
   };
   var bookCoverImages = {
     universe_at_your_fingertips: './images/evren_avucunda.jpg',
-    emile_or_on_education: './images/evren_avucunda.jpg',
-    my_name_is_red: './images/evren_avucunda.jpg',
-    noise: './images/evren_avucunda.jpg',
-    centuries_of_childhood: './images/evren_avucunda.jpg',
-    not_for_profit: './images/evren_avucunda.jpg',
-    how_the_soldiers_play_gramophone: './images/evren_avucunda.jpg',
-    the_ignorant_schoolmaster: './images/evren_avucunda.jpg',
-    school_blues: './images/evren_avucunda.jpg',
-    cleverlands: './images/evren_avucunda.jpg',
+    emile_or_on_education: './images/emile_or_on_education.jpg',
+    my_name_is_red: './images/my_name_is_red.jpg',
+    noise: './images/noise.jpg',
+    centuries_of_childhood: './images/centuries_of_childhood.jpg',
+    not_for_profit: './images/not_for_profit.jpg',
+    how_the_soldiers_play_gramophone: './images/how_the_soldiers_play_gramophone.jpg',
+    the_ignorant_schoolmaster: './images/the_ignorant_schoolmaster.jpg',
+    school_blues: './images/school_blues.jpg',
+    cleverlands: './images/cleverland.jpg',
   };
 
   function book_info() {
+    const pageHeader = document.createElement('h1');
+    pageHeader.innerHTML = 'My Recent Books';
+    document.body.appendChild(pageHeader);
+
     let newUl = document.createElement('ul');
     document.body.appendChild(newUl);
 
@@ -95,7 +99,6 @@
       newH2.innerHTML = bookInformation[key].title;
       newLi.appendChild(newH2);
 
-      // It is not working??
       let newPara1 = document.createElement('p');
       newPara1.innerHtml = 'The book is written by ' + bookInformation[key].author;
       newLi.appendChild(newPara1);

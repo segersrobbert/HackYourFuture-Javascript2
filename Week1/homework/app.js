@@ -95,6 +95,7 @@
       newH2.innerHTML = bookInformation[key].title;
       newLi.appendChild(newH2);
 
+      // It is not working??
       let newPara1 = document.createElement('p');
       newPara1.innerHtml = 'The book is written by ' + bookInformation[key].author;
       newLi.appendChild(newPara1);

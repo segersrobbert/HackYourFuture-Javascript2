@@ -1,8 +1,15 @@
 /* add your styling here */
+
 body {
   padding: 0;
   margin: 0;
   background-color: #5885af;
+}
+
+h1 {
+  text-align: center;
+  padding: 1%;
+  background: #e7f2f8;
 }
 
 ul {
@@ -51,3 +58,4 @@ img {
   margin-left: 3rem;
   margin-right: 3rem;
 }
+

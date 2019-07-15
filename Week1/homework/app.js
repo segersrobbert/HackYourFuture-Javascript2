@@ -22,7 +22,7 @@
   function addToParent(parent, child) {
     return parent.appendChild(child)
   }
-  function addArrayAndObjLibraryToList(array, object) {
+  function addObjLibraryToList(array, object) {
     var ul = createElement('UL')
     var textNodeTitle, textNodeAutor, textNodeLanguage
     var olBook, h2Title, liAutor, liLanguage
@@ -49,7 +49,7 @@
     addToParent(document.body, ul)
   }
 
-  function addArrayAndObjImgToList(array, img) {
+  function addObjImgToList(array, img) {
     var liImg, imgNode
     for (let value of array) {
       // Create element of the list
@@ -197,7 +197,7 @@
   addHeader() // Add Header to the page
   objImages = makeObjectImg(BookTitles) // Create obj with ubication of images
   objLibrary = makeLibrary(BookTitles) // Create obj with books information
-  addArrayAndObjLibraryToList(BookTitles, objLibrary) // Add array and object Library to list ul/ol/li
-  addArrayAndObjImgToList(BookTitles, objImages) // Add array and object Img to list ul/ol/li
+  addObjLibraryToList(BookTitles, objLibrary) // Add object Library to list ul/ol/li
+  addObjImgToList(BookTitles, objImages) // Add object Img to list ul/ol/li
   addfooter() // Add footer to the page
 }

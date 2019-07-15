@@ -22,32 +22,46 @@
   function addToParent(parent, child) {
     return parent.appendChild(child)
   }
-  function addArrayAndObjectsToList(array, object, img) {
+  function addArrayAndObjLibraryToList(array, object) {
     var ul = createElement('UL')
     var textNodeTitle, textNodeAutor, textNodeLanguage
-    var olBook, h2Title, liAutor, liLanguage, liImg, imgNode
+    var olBook, h2Title, liAutor, liLanguage
     for (let value of array) {
+      // Create element of the list
       olBook = createElement('OL')
+      olBook.setAttribute('id', value)
       h2Title = createElement('H2')
       liAutor = createElement('LI')
       liLanguage = createElement('LI')
-      liImg = createElement('LI')
-      imgNode = createElement('IMG')
+      // Create text node
       textNodeTitle = document.createTextNode(object[value].title)
       textNodeAutor = document.createTextNode(object[value].autor)
       textNodeLanguage = document.createTextNode(object[value].language)
-      imgNode.src = img[value]
+      // Add element to each parent in the list
       addToParent(h2Title, textNodeTitle)
-      addToParent(liImg, imgNode)
       addToParent(liAutor, textNodeAutor)
       addToParent(liLanguage, textNodeLanguage)
       addToParent(olBook, h2Title)
-      addToParent(olBook, liImg)
       addToParent(olBook, liAutor)
       addToParent(olBook, liLanguage)
       addToParent(ul, olBook)
     }
     addToParent(document.body, ul)
+  }
+
+  function addArrayAndObjImgToList(array, img) {
+    var liImg, imgNode
+    for (let value of array) {
+      // Create element of the list
+      liImg = createElement('LI')
+      imgNode = createElement('IMG')
+      imgNode.src = img[value]
+      // Add imgNode to Li in the list
+      addToParent(liImg, imgNode)
+      // Add element Li to each parent in the list in its repective order using the BookID
+      var olBook = document.getElementById(value)
+      olBook.insertBefore(liImg, olBook.childNodes[1])
+    }
   }
 
   function makeLibrary(array) {
@@ -183,6 +197,7 @@
   addHeader() // Add Header to the page
   objImages = makeObjectImg(BookTitles) // Create obj with ubication of images
   objLibrary = makeLibrary(BookTitles) // Create obj with books information
-  addArrayAndObjectsToList(BookTitles, objLibrary, objImages) // Add array and object to list ul/ol/li
+  addArrayAndObjLibraryToList(BookTitles, objLibrary) // Add array and object Library to list ul/ol/li
+  addArrayAndObjImgToList(BookTitles, objImages) // Add array and object Img to list ul/ol/li
   addfooter() // Add footer to the page
 }

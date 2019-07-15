@@ -1,19 +1,25 @@
-module.exports = {
-  'env': {
-    'browser': true,
-    'es6': true
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "jest": true
   },
-  'extends': [
-    'standard'
-  ],
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly'
-  },
-  'parserOptions': {
-    'ecmaVersion': 2018
-  },
-  'rules': {
-    "space-before-function-paren": "off"
+  "rules": {
+    "prettier/prettier": ["error"],
+    "strict": "off",
+    "func-names": "off",
+    "import/no-dynamic-require": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-restricted-syntax": "off",
+    "object-shorthand": "off",
+    "operator-assignment": "off",
+    "prefer-arrow-callback": "off",
+    "prefer-destructuring": "off",
+    "prefer-template": "off",
+    "trailing-comma": "off",
+    "linebreak-style": "off"
   }
 }

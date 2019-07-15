@@ -69,9 +69,8 @@ document.getElementById('btn-changeImage').addEventListener('click', changeImage
 
 document.getElementById('btn-addTodo').addEventListener('click', addTodo);
 function addTodo() {
-  let list = document.getElementById('todoList');
+  const list = document.getElementById('todoList');
   let input = document.getElementById('todoInput');
-  console.log(input.value);
   let x = document.createElement('LI');
   x.innerHTML = input.value;
   list.appendChild(x);

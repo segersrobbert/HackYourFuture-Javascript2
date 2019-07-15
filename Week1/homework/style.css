@@ -51,7 +51,7 @@ ul li {
   box-sizing: border-box;
   border-radius: 1.5%;
 }
-/* styling li text's so that they would be upper than the images */
+/* styling li text's so that they would be down of the images */
 ul li p {
   font-size: large;
   text-align: center;

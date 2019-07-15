@@ -15,6 +15,7 @@
     '5th_horseman',
   ];
 
+  /* 
   //creatin' a function that generates an ul with li elements in a loop
   function createUl(bookTitles) {
     var division = document.createElement('div');
@@ -36,6 +37,7 @@
     return division;
   }
   document.body.appendChild(createUl(bookTitles));
+  */
 
   //making an object containing book information and including nested objects
   let bookInfos = {};
@@ -106,6 +108,7 @@
   }
   console.log(bookInfos);
 
+  /*
   //making another function using the object to write information about book to html body div using related element
   function createObjectElements(bookInfos) {
     var div = document.createElement('div');
@@ -138,8 +141,8 @@
     return div;
   }
   document.body.appendChild(createObjectElements(bookInfos));
+  */
 
-  //making an object containing paths to the related images
   const imgObject = {
     the_mystery_on_the_mountain_parbat: './img/parbat.jpg',
     de_peetvader: './img/peetvader.jpg',
@@ -154,14 +157,61 @@
   };
   //Looping over imgObject to get the keys(book names)
   var objectKeys = Object.keys(imgObject);
-  //writing a function to add img sources to li items
-  function imgAssingToLi() {
-    for (let j in objectKeys) {
-      var img = document.createElement('img');
-      img.src = imgObject[objectKeys[j]];
-      img.alt = objectKeys[j];
-      document.getElementById('book_' + bookTitles[j]).appendChild(img);
+
+  //combining the functions
+  function createObjectElements(bookInfos) {
+    var div = document.createElement('div');
+    div.setAttribute('id', 'bookInfo');
+    var titleHeader = document.createElement('h1');
+    titleHeader.appendChild(document.createTextNode('Information about The Books'));
+    div.appendChild(titleHeader);
+
+    var ul = document.createElement('ul');
+
+    for (let i = 0; i < bookTitles.length; i++) {
+      var li = document.createElement('li');
+      li.setAttribute('id', 'book_' + bookTitles[i]);
+
+      var header = document.createElement('h2');
+      header.appendChild(document.createTextNode(bookInfos[bookTitles[i]].title));
+      li.appendChild(header);
+
+      var p = document.createElement('p');
+      p.appendChild(
+        document.createTextNode(
+          'The language of the book is: ' + bookInfos[bookTitles[i]].language,
+        ),
+      );
+      li.appendChild(p);
+
+      var p2 = document.createElement('p');
+      p2.appendChild(
+        document.createTextNode('The author of the book is: ' + bookInfos[bookTitles[i]].author),
+      );
+      li.appendChild(p2);
+
+      var imgs = document.createElement('img');
+      imgs.src = imgObject[objectKeys[i]];
+      imgs.alt = objectKeys[i];
+      li.appendChild(imgs);
+      ul.appendChild(li);
     }
+    div.appendChild(ul);
+    return div;
   }
-  imgAssingToLi();
+  document.body.appendChild(createObjectElements(bookInfos));
+
+  //making an object containing paths to the related images
+
+  //writing a function to add img sources to li items
+  /*function imgAssingToLi() {
+    for (let j in objectKeys) {
+      var imgs = document.createElement('img');
+      imgs.src = imgObject[objectKeys[j]];
+      imgs.alt = objectKeys[j];
+      document.getElementById('book_' + bookTitles[j]).appendChild(imgs);
+    }
+    return;
+  }
+  imgAssingToLi();*/
 }

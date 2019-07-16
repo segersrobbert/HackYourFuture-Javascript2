@@ -65,4 +65,4 @@ dist/
 *.eslintrc.json
 *eslintrc.json
 # Week1
-Week1/
+Week1/*

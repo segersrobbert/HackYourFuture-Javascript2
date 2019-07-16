@@ -59,10 +59,3 @@ typings/
 
 .netlify
 dist/
-
-*eslintrc.js
-.eslintrc.json
-*.eslintrc.json
-*eslintrc.json
-# Week1
-Week1/*

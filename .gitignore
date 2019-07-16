@@ -59,6 +59,3 @@ typings/
 
 .netlify
 dist/
-
-.eslintrc.js
-.eslintrc.json

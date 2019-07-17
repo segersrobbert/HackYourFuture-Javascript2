@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 {
 function obj_length(obj) {
   return Object.keys(obj).length;

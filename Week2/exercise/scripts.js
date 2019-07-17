@@ -84,9 +84,9 @@ const swappedText = swapCase(text);
 // Write a JavaScript program to get the length of an JavaScript object.
 
 const myObject = {
-Firstname : "Gareth",
-lastname : "Simpson",
-age : 21,
+    Firstname: "Gareth",
+    lastname: "Simpson",
+    age: 21,
 }
 
 console.log(Object.keys(myObject).length);
@@ -103,5 +103,17 @@ console.log(count)
  */
 
 
-// Write a JavaScript program to create a Clock
+// Write a JavaScript program to create a Clock.
+// Console every second :”14:37:42”,”14:37:43", “14:37:44”, "14:37:45"
 
+const span = document.getElementById('span');
+
+function time() {
+  const d = new Date();
+  const s = d.getSeconds();
+  const m = d.getMinutes();
+  const h = d.getHours();
+  span.innerHTML = h + ":" + m + ":" + s;
+}
+
+setInterval(time, 1000);

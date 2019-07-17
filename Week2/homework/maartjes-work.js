@@ -1,4 +1,4 @@
-'use strict';
+    'use strict';
 
 const monday = [
   {
@@ -44,18 +44,32 @@ const tuesday = [
 
 const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
+console.log('orginal' , maartjesTasks);
 
 function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
-  console.log(tasks, hourlyRate);
+   
+ let newTasks = tasks.map(function(val) {
+    return {
+        name: val.name,
+        duration: (val.duration/60).toFixed(2), //Map the tasks to durations in hours.
+        earning: '€'+((val.duration/60).toFixed(2))*hourlyRate //Multiply the each duration by a per-hour rate for billing (use €20/hour)
+    };
+});
+tasks = newTasks.filter(newTasks => newTasks.duration >= 2); //Filter out everything that took less than two hours
+console.log('filtered ',tasks);
+//and sum it all up.
+let sum = 0
+sum = tasks
+  .map(task => (task.duration) * hourlyRate)
+  .reduce((prev, cur) => prev + cur, 0)
+return sum;
 }
+let earning = computeEarnings(maartjesTasks, maartjesHourlyRate);
 
-// eslint-disable-next-line no-unused-vars
-const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
 
 // add code to convert `earnings` to a string rounded to two decimals (euro cents)
 
-console.log(`Maartje has earned €${'replace this string with the earnings rounded to euro cents'}`);
+console.log(`Maartje has earned €${earning.toFixed(2)}`);
 
 // Do not change or remove anything below this line
 module.exports = {

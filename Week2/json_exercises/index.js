@@ -1,3 +1,5 @@
+'use strict'
+{
 function obj_length(obj) {
   return Object.keys(obj).length;
 }
@@ -15,4 +17,5 @@ function clock() {
   var time = h + ':' + m + ':' + s;
   console.log(time);
   setTimeout(clock, 1000);
+}
 }

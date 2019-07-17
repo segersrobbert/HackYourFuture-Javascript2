@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>map-filter.js</title>
+  </head>
+  <body>
+    <script>
+
+    function doubleOddNumbers(numbers) {
+        const odds = numbers.filter(num => num%2 === 1);
+        return odds.map(num => num*2 );
+    }
+const myNumbers = [1, 2, 3, 4];
+console.log('array numbers', myNumbers);
+console.log('filtered and doubled',doubleOddNumbers(myNumbers));
+
+// Do not change or remove anything below this line
+module.exports = {
+myNumbers,
+doubleOddNumbers,
+};
+    </script>
+  </body>
+</html>

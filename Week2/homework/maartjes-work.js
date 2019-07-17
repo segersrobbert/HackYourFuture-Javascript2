@@ -48,7 +48,7 @@ const maartjesHourlyRate = 20;
 function computeEarnings(tasks, hourlyRate) {
   let earning = 0;
   let filteredArray = tasks.filter(elem => elem.duration/60 >= 2)
-  let earningArray = filteredArray.map(elem => elem.duration*hourlyRate);  
+  let earningArray = filteredArray.map(elem => elem.duration*hourlyRate/60);  
   for(let i in earningArray){
     earning += earningArray[i];
   }

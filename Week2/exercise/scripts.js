@@ -17,7 +17,7 @@ const anArray = [
 ];
 
 function get1stElement(arr, val) {
-    const firstElem = arr[val];
+    const firstElem = arr.splice(0, val);
     return firstElem;
 }
 
@@ -106,14 +106,15 @@ console.log(count)
 // Write a JavaScript program to create a Clock.
 // Console every second :”14:37:42”,”14:37:43", “14:37:44”, "14:37:45"
 
-const span = document.getElementById('span');
 
 function time() {
-  const d = new Date();
-  const s = d.getSeconds();
-  const m = d.getMinutes();
-  const h = d.getHours();
-  span.innerHTML = h + ":" + m + ":" + s;
+    let span;
+    const d = new Date();
+    const s = d.getSeconds();
+    const m = d.getMinutes();
+    const h = d.getHours();
+    span = h + ":" + m + ":" + s;
+    console.log(span)
 }
 
 setInterval(time, 1000);

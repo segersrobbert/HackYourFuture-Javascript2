@@ -47,6 +47,7 @@ const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
   // Replace this comment and the next line with your code
+  
   console.log(tasks, hourlyRate);
 }
 

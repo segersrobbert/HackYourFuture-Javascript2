@@ -1,3 +1,5 @@
+"use_strict";
+
 const monday = [
   {
     name: 'Write a summary HTML/CSS',
@@ -44,8 +46,12 @@ const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
-  console.log(tasks, hourlyRate);
+  const taskDurations = tasks.map(x => x.duration / 60)
+  const filteredDurations = taskDurations.filter(x => x >= 2)
+  const multiplyBy20 = filteredDurations.map(x => x * hourlyRate)
+  const summedDurations = multiplyBy20.reduce((sum, duration) => sum + duration, 0)
+  const roundedEarnings = summedDurations.toFixed(2);
+  return roundedEarnings;
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -53,7 +59,7 @@ const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
 
 // add code to convert `earnings` to a string rounded to two decimals (euro cents)
 
-console.log(`Maartje has earned €${'replace this string with the earnings rounded to euro cents'}`);
+console.log(`Maartje has earned €${earnings}`);
 
 // Do not change or remove anything below this line
 module.exports = {

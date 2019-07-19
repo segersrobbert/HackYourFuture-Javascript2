@@ -52,4 +52,4 @@ my_Clock.prototype.updateTime = function (secs) {
   }
 };
 var clock = new my_Clock();
-//clock.run();
+clock.run();

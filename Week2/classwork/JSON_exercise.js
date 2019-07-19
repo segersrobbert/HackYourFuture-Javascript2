@@ -8,16 +8,21 @@ function Person(name, age, sex) {
   this.sex = sex;
 }
 let beri = new Person('Berihu', 26, 'Male')
+Person.prototype.eyeColor = 'black';
 lengthOfObject(beri);//3
 // write Js function to check if an object contains given property 
 let checkProperty = (obj, prop) => {
   if (obj.hasOwnProperty(prop)) {
-    return `the Object has own property: ${prop}`;
-  } else {
-    return false;
+    return `The Object has own property: ${prop}`;
+  } else if (prop in obj) {
+    return `The Object has prototype property`
+  }
+  else {
+    return `No such Property`;
   }
 }
-console.log(checkProperty(beri, 'age'));
+console.log(checkProperty(beri, 'eyeColor')); // The Object has prototype property
+console.log(checkProperty(beri, 'sex')); //The Object has own property: sex
 // write a js program to create Clock
 function my_Clock() {
   this.cur_date = new Date();
@@ -47,4 +52,4 @@ my_Clock.prototype.updateTime = function (secs) {
   }
 };
 var clock = new my_Clock();
-clock.run();
+//clock.run();

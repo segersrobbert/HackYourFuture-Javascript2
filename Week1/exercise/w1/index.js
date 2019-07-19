@@ -11,6 +11,13 @@ console.log('Hack your future Belgium!');
 
 // 1c: change the inner html of the header element to your name
 
+function changeHeader () { 
+    var header = document.querySelector('h1') 
+        header.innerHTML = "Fatma";  //innerHtml'e dikkat
+    console.log();
+} 
+var headerButton = document.getElementById("to-change-header");
+    headerButton.addEventListener('click', changeHeader);
 
 // ====================================== //
 
@@ -29,7 +36,15 @@ console.log('Hack your future Belgium!');
 
 // 2e: to change the image: assign the imageInputValue to the image src
 
+function changeImage () { 
+    var imageInputValue = document.querySelector("input").value;  
+    var imageToChange = document.querySelector("img");
+        imageToChange.src = imageInputValue;
+} 
 
+
+    var imageButton = document.getElementById("btn-changeImage");
+        imageButton.addEventListener('click', changeImage); 
 // ====================================== //
 
 
@@ -48,3 +63,17 @@ console.log('Hack your future Belgium!');
 // 3f: set created <li> element innerHtml to todoInput value
 
 // 3g: add <li> element to todoList
+
+
+function addTodo () {
+    var getTodoList = document.querySelector("#todoList")
+    var listInput = document.querySelector('#todoInput');
+    var newElement = document.createElement("li");
+    newElement.innerHTML = listInput.value;
+    getTodoList.appendChild(newElement);
+
+}
+
+
+var toDo = document.querySelector("#btn-addTodo");
+    toDo.addEventListener('click', addTodo);

@@ -1,1 +1,61 @@
 /* add your styling here */
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #5885af;
+}
+
+h1 {
+  text-align: center;
+  padding: 1%;
+  background: #e7f2f8;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4%;
+  align-items: start;
+  margin-bottom: 3%;
+  padding: 3%;
+}
+
+li {
+  background: #e7f2f8;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40% 30% 30%;
+  height: 15em;
+
+  padding: 1em;
+  border-radius: 30px 30px 30px 30px;
+}
+
+li {
+  align-self: center;
+  border-radius: 10px;
+}
+
+h2,
+p {
+  text-align: center;
+  margin: auto;
+  color: #1e3d58;
+}
+img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  width: auto;
+  height: 12rem;
+
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+

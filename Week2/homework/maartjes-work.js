@@ -46,7 +46,14 @@ const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
+  // create  variables of duration and task for monday
+  
+let duration = ['180', '120','20','200']
+let task = [ 'Write a summary HTML/CSS','Some web development','Fix homework for class10','Talk to a lot of people']
+    } 
+}); 
+ 
+
   console.log(tasks, hourlyRate);
 }
 

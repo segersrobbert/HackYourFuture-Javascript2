@@ -1,1 +1,35 @@
-/* add your styling here */
+body {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+  position: absolute;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+}
+li {
+  display: flex;
+  flex-flow: wrap;
+  background-color: white;
+  flex-direction: column;
+  width: 40%;
+  position: relative;
+  margin: 50px;
+  height: 200px;
+  box-shadow: 0 0.125rem 0.1875rem 0 rgba(0, 0, 0, 0.11);
+  border: 1px solid #ededed;
+}
+
+p,
+h1 {
+  margin-left: 200px;
+  color: #585858;
+}

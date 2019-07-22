@@ -45,10 +45,10 @@ const tuesday = [
 const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 function computeEarnings(tasks, hourlyRate) {
-  let changeToHours = tasks.map((elem, index, arr) => (arr[index].duration) / 60);
-  let greaterThanTwoHours = changeToHours.filter((elem) => elem > 2);
-  let bills = greaterThanTwoHours.map((elem) => elem * hourlyRate);
-  let totalBill = bills.reduce((acc, elem) => acc + elem);
+  let totalBill = tasks.map((elem, index, arr) => (arr[index].duration) / 60)
+    .filter((elem) => elem > 2)
+    .map((elem) => elem * hourlyRate)
+    .reduce((acc, elem) => acc + elem);
   return totalBill;
 }
 // eslint-disable-next-line no-unused-vars

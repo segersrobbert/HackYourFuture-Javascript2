@@ -1,1 +1,24 @@
 /* add your styling here */
+
+.mainContainer{  display: flex;
+    flex-direction: column;
+}
+  
+   
+    .itemsContainer{ 
+    display: flex;
+     flex-wrap: wrap;
+    margin: 5px;
+    font-size: 15px;
+   
+}
+.item{ 
+    margin: 10px;
+    width: 300px;
+
+}
+#title{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}

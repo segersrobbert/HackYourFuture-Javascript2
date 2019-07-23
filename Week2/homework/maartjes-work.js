@@ -50,7 +50,7 @@ function computeEarnings(tasks, hourlyRate) {
   const filteredDurations = taskDurations.filter(x => x >= 2)
   const multiplyBy20 = filteredDurations.map(x => x * hourlyRate)
   const summedDurations = multiplyBy20.reduce((sum, duration) => sum + duration, 0)
-  const roundedEarnings = summedDurations.toFixed(2);
+  const roundedEarnings = summedDurations.toFixed(2)
   return roundedEarnings;
 }
 

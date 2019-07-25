@@ -5,17 +5,16 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   for (let i = startIndex; i <= stopIndex; i++) {
     numbers.push(i);
   }
+
   numbers.map(x => {
-    if ((x % 5 === 0) && (x % 3 === 0)) {
-      sayFive(x), sayThree(x)
+    if (x % 5 === 0 && x % 3 === 0) {
+      threeCallback(x); fiveCallback(x)
     }
-  })
-  numbers.map(x => {
-    if (x % 3 === 0) {
-      sayThree(x)
+    else if (x % 3 === 0) {
+      threeCallback(x)
     }
     else if (x % 5 === 0) {
-      sayFive(x)
+      fiveCallback(x)
     }
   })
 
@@ -24,12 +23,12 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
 
 function sayThree(number) {
   // Replace this comment and the next line with your code
-  console.log("3", number);
+  console.log(number + "is dividable by 3");
 }
 
 function sayFive(number) {
   // Replace this comment and the next line with your code
-  console.log("5", number);
+  console.log(number + "is dividable by 5");
 }
 
 threeFive(10, 15, sayThree, sayFive);

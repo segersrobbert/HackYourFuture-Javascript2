@@ -1,14 +1,16 @@
-'use strict';
-
-function createBase(base) {
-  // Replace this comment and the next line with your code
-  console.log(base);
+'use strict'
+function createBase (base) {
+  console.log('The base is: ' + base)
+  return function (numToAdd) {
+    return numToAdd + base
+  }
 }
 
-const addSix = createBase(6);
-
-console.log(addSix(10)); // returns 16
-console.log(addSix(21)); // returns 27
-
+console.log('*********************************')
+console.log('*********Exercise # 3 ***********')
+const addSix = createBase(6)
+console.log('This returs 16 === %c' + addSix(10), 'color:blue') // returns 16
+console.log('This returs 27 === %c' + addSix(21), 'color:blue') // returns 27
+console.log('*********************************')
 // Do not change or remove anything below this line
-module.exports = createBase;
+module.exports = createBase

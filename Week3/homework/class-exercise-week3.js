@@ -38,10 +38,3 @@
   console.log(form2);
 }
 
-
-
-  // homework
-  --finish the exercise 
-  --ignore closures in github
-  --goback master branch and create a new branch for each week 
-

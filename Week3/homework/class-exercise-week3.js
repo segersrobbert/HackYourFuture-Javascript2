@@ -26,8 +26,8 @@
   //console.log('Hello');
 
   const form1 = new Form('form');
-  form1.createButton(); //I just want button for from 1, so make it outside the constructor
-  form1.createInput(); //yukarıdakilerden istediğim methodları seçiyorum
+  form1.createButton(); 
+  form1.createInput();
 
   const form2 = new Form('form');
   form2.createButton();

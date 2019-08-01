@@ -4,7 +4,7 @@
 
 class Form {
   constructor(formElement) {
-    console.log('Hello');
+    this.formElement = null;
     const newForm = document.createElement('form');
     document.getElementsByTagName('div')[0].appendChild(newForm);
     this.formElement = newForm;

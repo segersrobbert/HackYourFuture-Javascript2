@@ -1,12 +1,13 @@
 'use strict';
 
-const values = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
-
 function makeUnique(arr) {
-  // Replace this comment and the next line with your code
-  console.log(arr);
-}
 
+    let myArray = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
+
+    unique = [...new Set(myArray)];
+    return result;
+
+};
 const uniqueValues = makeUnique(values);
 console.log(uniqueValues);
 

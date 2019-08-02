@@ -1,10 +1,12 @@
 'use strict';
 
-function Dog() {
-  // add your code here
+function Dog(name, color) {
+  this.name = name;
+  this.color = color;
 }
-
-const hound = new Dog();
+Dog.prototype.numLegs = 4;
+const hound = new Dog('Boby', 'Whit');
+console.log(hound);
 
 // Do not change or remove anything below this line
 module.exports = hound;

@@ -21,7 +21,7 @@ function flattenArray3d(arr) {
   for(let firstd of arr){
     for (let secd of firstd){
       for(let thirdd of secd){
-      farr.push(secd);
+      farr.push(thirdd);
       }
     }
   }

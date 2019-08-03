@@ -12,7 +12,7 @@ function makeUnique(arr) {
 }
 
 const uniqueValues = makeUnique(values);
-console.log(uniqueValues);
+console.log(uniqueValues); // ["a", "b", "c", "d", "e", "f"]
 
 // Do not change or remove anything below this line
 module.exports = makeUnique;

@@ -4,17 +4,42 @@ const arr2d = [[1, 2], [3, 4], [5, 6]];
 const arr3d = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
 
 function flattenArray2d(arr) {
-  // Replace this comment and the next line with your code
-  console.log(arr);
+  let flatArr = [];
+  for (let i in arr) {
+    for (let j in arr[i]) {
+      flatArr.push(arr[i][j]);
+    }
+  }
+  return flatArr;
 }
 
 function flattenArray3d(arr) {
-  // Replace this comment and the next line with your code
-  console.log(arr);
+  let flatArr = [];
+  for (let i in arr) {
+    for (let j in arr[i]) {
+      for (let k in arr[i][j]) {
+        flatArr.push(arr[i][j][k]);
+      }
+    }
+  }
+  return flatArr;
 }
 
 console.log(flattenArray2d(arr2d)); // -> [1, 2, 3, 4, 5, 6]
 console.log(flattenArray3d(arr3d)); // -> [1, 2, 3, 4, 5, 6, 7, 8]
+
+/*
+Flatten out all the items of an array with x dimensions: 
+var newArray = arr.flat([depth]); 
+*/
+
+//Flatten out all the items of an array with 2 dimensions:
+var newArray2d = arr2d.flat([2]);
+console.log(newArray2d); // -> [1, 2, 3, 4, 5, 6]
+
+//Flatten out all the items of an array with 3 dimensions:
+var newArray3d = arr3d.flat([2]);
+console.log(newArray3d); // -> [1, 2, 3, 4, 5, 6, 7, 8]
 
 // Do not change or remove anything below this line
 module.exports = {

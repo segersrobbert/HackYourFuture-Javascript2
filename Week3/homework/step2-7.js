@@ -20,4 +20,12 @@ f2(y);
 
 console.log(y);
 
-// Add your explanation as a comment here
+/* f1(x) : We assign 9 to x, then add 1 to the value of x with its function. 
+the result returns to 10, but the value of the constant cannot be changed by reassignment. 
+x remains the same. print 9 as x value on the console.
+*/
+
+/*
+
+
+*/

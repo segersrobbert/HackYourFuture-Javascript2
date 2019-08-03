@@ -1,7 +1,9 @@
 'use strict';
 
 function doubleOddNumbers(numbers) {
-  // Replace this comment and the next line with your code
+        const odds = numbers.filter(num => num%2 === 1);
+        return odds.map(num => num*2 );
+    }
   console.log(numbers);
 }
 

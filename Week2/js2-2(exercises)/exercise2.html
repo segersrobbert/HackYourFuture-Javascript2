@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>exercise2</title>
+  </head>
+  <body>
+    <script>
+        //input number and convert to string
+           var number = window.prompt();
+           var string = number.toString();
+        //insert dash(-) between oddnumbers
+        function insertDash(num){
+            var array = [];
+            for(var i = 0; i < num.length; i++){
+               if((num[i] % 2 === 0) && num[i+1] % 2 === 0){
+                array.push(num[i] + '-' )
+               }
+               else array.push(num[i])
+               }
+               return array.join('');
+            }
+        console.log(insertDash(string));
+    </script>
+  </body>
+</html>

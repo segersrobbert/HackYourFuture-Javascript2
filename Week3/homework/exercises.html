@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS2-3</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+class Form {
+  constructor(formElement) {
+    console.log('Hello');
+    const newForm = document.createElement('form');
+    document.getElementsByTagName('div')[0].appendChild(newForm);
+    this.formElement = newForm;
+  }
+  createButton() {
+    const btn = document.createElement('button');
+    this.formElement.appendChild(btn);
+    btn.innerHTML = ' Button ';
+  }
+  createInput() {
+    const input1 = document.createElement('input');
+    this.formElement.appendChild(input1);
+  }
+  createCheckBox() {
+    const cbox =document.createElement('input');
+    cbox.setAttribute('type', 'checkbox');
+    this.formElement.appendChild(cbox);
+  }
+}
+const form1 = new Form();
+form1.createButton();
+form1.createInput();
+form1.createCheckBox();
+
+console.log(form1);
+    </script>
+ 
+  </body>
+</html>

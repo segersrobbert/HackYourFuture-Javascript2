@@ -1,7 +1,9 @@
 'use strict';
 
 function Dog() {
-  // add your code here
+  this.type = "animal";
+  this.leg = 4;
+  this.alive = true;
 }
 
 const hound = new Dog();

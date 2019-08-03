@@ -3,8 +3,8 @@
 const values = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
 
 function makeUnique(arr) {
-  // Replace this comment and the next line with your code
-  console.log(arr);
+ arr.sort().map(x => {if(arr.indexOf(x)!=arr.lastIndexOf(x)) arr.splice(arr.indexOf(x),1)});
+ return arr; 
 }
 
 const uniqueValues = makeUnique(values);

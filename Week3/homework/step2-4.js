@@ -1,7 +1,7 @@
 'use strict';
 
 function Dog() {
-  this.type = "animal";
+  this.creature = "animal";
   this.leg = 4;
   this.alive = true;
 }

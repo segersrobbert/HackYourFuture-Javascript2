@@ -1,1 +1,30 @@
-/* add your styling here */
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: rgb(126, 163, 231);    
+}
+marquee{
+    color: rgba(12, 31, 202, 0.856);
+    font-size: 2em;
+    padding: 50px;
+}
+#root2 ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1%;  
+}
+ul li {
+    border: 1px solid black;
+    list-style: none;
+    font-size: 1.5em;
+}
+h2{
+    color: rgb(83, 12, 150);
+}
+h2:hover {
+    text-decoration: underline;
+}
+img{
+    width: 100%;
+    height: 70vh;
+}

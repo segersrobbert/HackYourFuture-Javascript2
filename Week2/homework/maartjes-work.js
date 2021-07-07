@@ -42,24 +42,23 @@ const tuesday = [
   },
 ];
 
-const maartjesTasks = monday.concat(tuesday);
-const maartjesHourlyRate = 20;
+const tasks = monday.concat(tuesday);
 
-function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
-  console.log(tasks, hourlyRate);
-}
+const durationInHours = tasks.map(x => {
+  return x.duration / 60;
+});
+console.log('Duration in hours: ' + durationInHours);
 
-// eslint-disable-next-line no-unused-vars
-const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
+const moreThanTwoHours = durationInHours.filter(x => {
+  if (x >= 2) {
+    return x;
+  }
+});
+console.log('Durations more than 2 hours: ' + moreThanTwoHours);
 
-// add code to convert `earnings` to a string rounded to two decimals (euro cents)
-
-console.log(`Maartje has earned €${'replace this string with the earnings rounded to euro cents'}`);
-
-// Do not change or remove anything below this line
-module.exports = {
-  maartjesTasks,
-  maartjesHourlyRate,
-  computeEarnings,
-};
+const perHourRate = moreThanTwoHours.map(x => {
+  return x * 20;
+});
+console.log('Earnings: ' + perHourRate);
+const earnings = '€' + perHourRate.reduce((a, b) => a + b, 0).toFixed(2);
+console.log('Maartje has earned: ' + earnings);

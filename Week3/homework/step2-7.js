@@ -19,5 +19,9 @@ function f2(val) {
 f2(y);
 
 console.log(y);
-
-// Add your explanation as a comment here
+/*
+Constants are block-scoped, much like variables defined using the let statement.
+The value of a constant can't be changed through reassignment, and it can't be redeclared.
+The const declaration creates a read-only reference to a value. It does not mean the value it holds is immutable, just that the variable identifier cannot be reassigned.
+For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered.
+*/

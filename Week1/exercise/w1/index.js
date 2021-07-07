@@ -1,4 +1,14 @@
+
+
 console.log('Hack your future Belgium!');
+
+
+
+// select  button byıd 
+
+// add event lıstener to that button  
+//
+
 
 // EXERCISE 1
 
@@ -11,9 +21,15 @@ console.log('Hack your future Belgium!');
 
 // 1c: change the inner html of the header element to your name
 
+const h1 = document.querySelector("h1")
+function changeHeader() {
+    console.log("test");
+    h1.innerHTML ="Rahime";
+}
+
+document.getElementById("btn-changeHeader").addEventListener("click", changeHeader);
 
 // ====================================== //
-
 
 // EXERCISE 2
 
@@ -30,10 +46,18 @@ console.log('Hack your future Belgium!');
 // 2e: to change the image: assign the imageInputValue to the image src
 
 
+function changeImage() {
+
+    console.log("test2");
+    const imageToChange = document.querySelector("img");
+    const imageInputValue = document.querySelector("#imageInput").value;
+    imageToChange.src = imageInputValue;
+}
+  document.getElementById("btn-changeImage").addEventListener("click", changeImage);
 // ====================================== //
 
-
 // Exercise 3:
+
 
 // 3a: select "add todo" button & add click event listener to execute addTodo() function on click event
 
@@ -48,3 +72,20 @@ console.log('Hack your future Belgium!');
 // 3f: set created <li> element innerHtml to todoInput value
 
 // 3g: add <li> element to todoList
+
+
+     var btn = document.getElementById("btn-addTodo");//a
+
+     btn.addEventListener("click", addTodo);//b
+
+    function addTodo (){
+
+      var myList = document.getElementById("todoList");
+      var myInput = document.getElementById("todoInput").value; 
+        console.log(myInput);
+      
+      var newItem = document.createElement("li");
+      newItem.innerHTML= myInput;
+      myList.appendChild(newItem);
+      
+    }
